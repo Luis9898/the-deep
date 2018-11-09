@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1998963686792842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.23, y: 2.95, z: 0}
-  m_LocalScale: {x: 1.347, y: 1.325, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   juggerTimerMax: 0
+  juggerTimer: 0
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
 --- !u!114 &114905559484345544

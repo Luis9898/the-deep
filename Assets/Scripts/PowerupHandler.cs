@@ -6,24 +6,39 @@ public class PowerupHandler : MonoBehaviour {
 
     //choice of powerup (1-5)
     public int powerupSelect;
+    private int health;
+    GameObject player;
 
 	// Use this for initialization
 	void Start () {
-        System.Random rand = new System.Random();
-        powerupSelect = rand.Next(1, 6);
-	}
+        powerupSelect = (int)(Random.Range(1f, 2.999999f));
+        health = 1;
+        player = GameObject.FindWithTag("Player");
+        Debug.Log("num = " + powerupSelect);
+    }
 
+    private void Update()
+    {
+        if (health <= 0)
+            Die();
+    }
     //detect a (semi) collision (no physics)
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Die();
+        //add 1 to player health so powerup doesn't kill him/her
+        //player.GetComponent<DamageHandler>().health++;
+        health--;
+
     }
 
     //execute upon object death
     private void Die()
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
+        //GameObject.FindWithTag("Player").GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
 
+        player.GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
         Destroy(gameObject);
+
+        //player.GetComponent<DamageHandler>().juggerTimer = 0f;
     }
 }

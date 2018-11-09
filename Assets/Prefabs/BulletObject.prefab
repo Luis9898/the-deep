@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   juggerTimerMax: 0
+  juggerTimer: 0
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
 --- !u!212 &212397901277336222

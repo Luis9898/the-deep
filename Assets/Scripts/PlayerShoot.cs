@@ -8,7 +8,8 @@ public class PlayerShoot: MonoBehaviour
     private float firedelay;
     private float cooldown;
     private int powerup;
-    private int startShotty;
+    private int shottyTimer;
+    private int leadTimer;
 
     public GameObject bulletPrefab;
 
@@ -17,7 +18,8 @@ public class PlayerShoot: MonoBehaviour
         firedelay = .35f;
         cooldown = 0f;
         powerup = 0;
-        startShotty = 0;
+        shottyTimer = 0;
+        leadTimer = 0;
     }
 
     // Update is called once per frame
@@ -41,12 +43,15 @@ public class PlayerShoot: MonoBehaviour
             //TEMPORARY: consider any powerup as the shotgun spray
             if (powerup != 0)
             {
-                startShotty = 20;
+                if(powerup == 1)
+                    shottyTimer = 20;
+                else if(powerup == 2)
+                    leadTimer = 20;
                 powerup = 0;
             }
 
             //if time is still remaining on the powerup
-            if(startShotty > 0) {
+            if(shottyTimer > 0) {
                 GameObject c = Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
                 GameObject d = Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
 
@@ -56,7 +61,16 @@ public class PlayerShoot: MonoBehaviour
                 c.layer = LayerMask.NameToLayer("Bullet");
                 d.layer = LayerMask.NameToLayer("Bullet");
 
-                startShotty--;
+                shottyTimer--;
+            }
+
+            //if lead powerup active
+            if(leadTimer > 0)
+            {
+                //make the bullet 3x penatrable
+                b.GetComponent<DamageHandler>().health = 3;
+
+                leadTimer--;
             }
 
 
