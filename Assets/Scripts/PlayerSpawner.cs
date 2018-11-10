@@ -11,14 +11,6 @@ public class PlayerSpawner : MonoBehaviour {
 	void Start () {
         spawnPlayer();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(playerInstance == null)
-        {
-            spawnPlayer();
-        }
-	}
 
     //spawns the player
     void spawnPlayer() {
