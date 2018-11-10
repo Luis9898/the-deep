@@ -29,7 +29,10 @@ public class DamageHandler : MonoBehaviour
     {
         //give invulnerability(before updating position). If invulnerability is done, return player to normal layer.
         if (juggerTimer > 0)
+        {
+            gameObject.layer = 10;
             juggerTimer -= Time.deltaTime;
+        }
         else
             gameObject.layer = defaultLayer;
 

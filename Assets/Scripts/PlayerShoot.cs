@@ -10,6 +10,7 @@ public class PlayerShoot: MonoBehaviour
     private int powerup;
     private int shottyTimer;
     private int leadTimer;
+    public int fastTimer;
 
     public GameObject bulletPrefab;
 
@@ -25,7 +26,11 @@ public class PlayerShoot: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetButtonDown("Fire1"))
+        if (fastTimer > 0)
+            firedelay = .2f;
+        else
+            firedelay = .35f;
+        firedelay--;
 
         cooldown -= Time.deltaTime;
 

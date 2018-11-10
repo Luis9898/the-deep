@@ -9,8 +9,8 @@ public class PowerupHandler : MonoBehaviour {
     private int health;                 //health remaining on powerup (0 or 1)
     GameObject player;                  //player object (to know when they connect)
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         powerupSelect = (int)(Random.Range(1f, 2.999999f));
         health = 1;
         player = GameObject.FindWithTag("Player");
@@ -33,7 +33,26 @@ public class PowerupHandler : MonoBehaviour {
     //give player the powerup, execute upon object death
     private void Die()
     {
-        player.GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
+        //if 1 (shotgun) or 2 (lead bullets)
+        if (powerupSelect == 1 || powerupSelect == 2)
+            player.GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
+
+        //if 3 (add health)
+        else if (powerupSelect == 3)
+            player.GetComponent<DamageHandler>().health++;
+
+        //if 4 (grant invincibility)
+        else if (powerupSelect == 4)
+            player.GetComponent<DamageHandler>().juggerTimer = 10;
+
+        //if 5 (speed up)
+        else if (powerupSelect == 5)
+            player.GetComponent<PlayerMove>().speedupTimer = 10;
+
+        //if 6 (rapidfire)
+        else
+            player.GetComponent<PlayerShoot>().fastTimer = 30;
+
         Destroy(gameObject);
     }
 }

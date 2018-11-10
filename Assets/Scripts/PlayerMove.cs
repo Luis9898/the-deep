@@ -6,8 +6,12 @@ public class PlayerMove : MonoBehaviour {
 
     private Vector3 mouse_pos;
     private Vector3 mouse_dir;
-    private float maxSpeed = 100;
+    public float maxSpeed = 100;
     Rigidbody2D rb;
+    int force = 25;
+
+    public float speedupTimerMax = 10f;               //max time for speedup
+    public float speedupTimer = 0f;                  //time remaining for speedup
 
     private float screen_ratio;
     private float width_ortho;
@@ -34,12 +38,24 @@ public class PlayerMove : MonoBehaviour {
         //if right mouse button held down
         if (Input.GetMouseButton(1))
         {
-            rb.AddForce(mouse_dir * 25);
+            rb.AddForce(mouse_dir * force);
             transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
         }
 
         //set max speed (in case surpassed)
         if (rb.velocity.magnitude > maxSpeed)
             rb.velocity = rb.velocity.normalized * maxSpeed;
+    }
+
+    private void Update()
+    {
+        if (speedupTimer > 0)
+        {
+            force = 35;
+            speedupTimer -= Time.deltaTime;
+        }
+
+        else
+            force = 25;
     }
 }
