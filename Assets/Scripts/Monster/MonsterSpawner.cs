@@ -6,7 +6,7 @@ using UnityEngine;
 public class MonsterSpawner : MonoBehaviour
 {
     public GameObject monsterPrefab;                //monster object, to later be modified for various types
-    GameObject monsterInstance;
+    //GameObject monsterInstance;
 
     public float monsterDelay = 1f;
     private float timeToSpawn = 0f;
@@ -33,7 +33,7 @@ public class MonsterSpawner : MonoBehaviour
     //spawns the monster
     void spawnMonster()
     {
-        monsterInstance = (GameObject)Instantiate(monsterPrefab, transform.position, Quaternion.identity);
+        Instantiate(monsterPrefab, transform.position, Quaternion.identity);
     }
 }
 

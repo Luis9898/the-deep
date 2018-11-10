@@ -22,10 +22,9 @@ GameObject:
   - component: {fileID: 212552630622262172}
   - component: {fileID: 114284544444665516}
   - component: {fileID: 114606782735754378}
-  - component: {fileID: 114470560231682670}
+  - component: {fileID: 114015610103821250}
   - component: {fileID: 60138372009563784}
   - component: {fileID: 50442604776876804}
-  - component: {fileID: 61110992343870534}
   m_Layer: 9
   m_Name: PlayerObject
   m_TagString: Player
@@ -75,7 +74,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -104,31 +103,20 @@ PolygonCollider2D:
       - {x: 0.109051935, y: -0.008827868}
       - {x: 0.15831739, y: 0.0501374}
       - {x: 0.15756358, y: 0.16241339}
---- !u!61 &61110992343870534
-BoxCollider2D:
+--- !u!114 &114015610103821250
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074914994645594}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.45000002}
-    newSize: {x: 0.36, y: 0.45000002}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.45000002}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611d0baa6d708414caca6c77795c5d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  juggerTimerMax: 2
+  juggerTimer: 0
 --- !u!114 &114284544444665516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,22 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62c284bb2465154d9235d9812354089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114470560231682670
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074914994645594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783c0d91bf4ed7346ac1dcda8a3debde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  juggerTimerMax: 2
-  juggerTimer: 0
-  powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
-    type: 2}
+  maxSpeed: 100
+  speedupTimerMax: 10
+  speedupTimer: 0
 --- !u!114 &114606782735754378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48df175b2f4ae574cb834d0c1e296011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fastTimer: 0
   bulletPrefab: {fileID: 1718504103081080, guid: 9b6edb91e55eab9428b2338bf3ef8b59,
     type: 2}
 --- !u!212 &212552630622262172

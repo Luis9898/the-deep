@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4409885203180826}
   - component: {fileID: 212397901277336222}
-  - component: {fileID: 114423328409954404}
+  - component: {fileID: 114258554857006646}
+  - component: {fileID: 114839461539309288}
+  - component: {fileID: 114267861225176492}
   - component: {fileID: 61079093322216110}
   - component: {fileID: 50220076951805580}
-  - component: {fileID: 114657851222286030}
-  - component: {fileID: 114267861225176492}
   m_Layer: 12
   m_Name: BulletObject
   m_TagString: Untagged
@@ -74,7 +74,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -90,6 +90,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37, y: 0.48}
   m_EdgeRadius: 0
+--- !u!114 &114258554857006646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718504103081080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a2e0594ddf0044aa6eeed96038f183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.08
 --- !u!114 &114267861225176492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 8
---- !u!114 &114423328409954404
+--- !u!114 &114839461539309288
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,26 +122,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1718504103081080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad5e609d981d68244ba8006795d1c4da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.05
---- !u!114 &114657851222286030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718504103081080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783c0d91bf4ed7346ac1dcda8a3debde, type: 3}
+  m_Script: {fileID: 11500000, guid: 2782e40cfa3a94e449fd94fae96529be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  juggerTimerMax: 0
-  juggerTimer: 0
-  powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
-    type: 2}
 --- !u!212 &212397901277336222
 SpriteRenderer:
   m_ObjectHideFlags: 1

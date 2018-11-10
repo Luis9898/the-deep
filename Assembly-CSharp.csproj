@@ -61,16 +61,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\DamageHandler.cs" />
-    <Compile Include="Assets\Scripts\FacePlayer.cs" />
-    <Compile Include="Assets\Scripts\MonsterSpawner.cs" />
-    <Compile Include="Assets\Scripts\MoveForward.cs" />
-    <Compile Include="Assets\Scripts\MovingBackground.cs" />
-    <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\PlayerShoot.cs" />
-    <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
-    <Compile Include="Assets\Scripts\PowerupHandler.cs" />
-    <Compile Include="Assets\Scripts\SelfDestruct.cs" />
+    <Compile Include="Assets\Scripts\Bullet\BulletDamageHandler.cs" />
+    <Compile Include="Assets\Scripts\Bullet\BulletMove.cs" />
+    <Compile Include="Assets\Scripts\Bullet\SelfDestruct.cs" />
+    <Compile Include="Assets\Scripts\Monster\FacePlayer.cs" />
+    <Compile Include="Assets\Scripts\Monster\MonsterDamageHandler.cs" />
+    <Compile Include="Assets\Scripts\Monster\MonsterMove.cs" />
+    <Compile Include="Assets\Scripts\Monster\MonsterSpawner.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDamageHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\Powerup\PowerupHandler.cs" />
+    <Compile Include="Assets\Scripts\Textures\MovingBackground.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Users/reaga/Documents/unityProjects/The_Deep/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

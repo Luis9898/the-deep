@@ -26,16 +26,16 @@ public class PlayerShoot: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fastTimer > 0)
-            firedelay = .2f;
-        else
-            firedelay = .35f;
-        firedelay--;
-
         cooldown -= Time.deltaTime;
 
         if (cooldown <= 0)
         {
+            if (fastTimer > 0)
+                firedelay = .15f;
+            else
+                firedelay = .35f;
+            fastTimer--;
+
             cooldown = firedelay;
 
             Vector3 offset = transform.rotation * new Vector3(0, .5f, 0);
@@ -45,7 +45,6 @@ public class PlayerShoot: MonoBehaviour
             b.layer = LayerMask.NameToLayer("Bullet");
 
             //if shotgun powerup active, use it
-            //TEMPORARY: consider any powerup as the shotgun spray
             if (powerup != 0)
             {
                 if(powerup == 1)
@@ -73,12 +72,10 @@ public class PlayerShoot: MonoBehaviour
             if(leadTimer > 0)
             {
                 //make the bullet 3x penatrable
-                b.GetComponent<DamageHandler>().health = 3;
+                b.GetComponent<BulletDamageHandler>().health = 3;
 
                 leadTimer--;
             }
-
-
         }
     }
 

@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4006249964014682}
   - component: {fileID: 212274637760375102}
-  - component: {fileID: 114233248405621196}
   - component: {fileID: 114905559484345544}
+  - component: {fileID: 114280049061904474}
   - component: {fileID: 114930535633466582}
   - component: {fileID: 61957004910732676}
   - component: {fileID: 50564761503591650}
@@ -90,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.48}
   m_EdgeRadius: 0
---- !u!114 &114233248405621196
+--- !u!114 &114280049061904474
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,12 +98,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998963686792842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783c0d91bf4ed7346ac1dcda8a3debde, type: 3}
+  m_Script: {fileID: 11500000, guid: 72e596f87d8266b4bada2263f1d81cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  juggerTimerMax: 0
-  juggerTimer: 0
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
 --- !u!114 &114905559484345544
