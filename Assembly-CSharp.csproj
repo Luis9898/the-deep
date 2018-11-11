@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Monster\MonsterDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterMove.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterSpawner.cs" />
+    <Compile Include="Assets\Scripts\Monster\UrchinGrow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />

@@ -6,6 +6,7 @@ public class MonsterDamageHandler : MonoBehaviour {
 
     public int health = 1;                          //health of object
     public GameObject powerupPrefab;                //used to create powerup (upon monster death)
+    public GameObject urchinPrefab;                 //used to create urchin
 
 
     // Use this for initialization
@@ -38,12 +39,17 @@ public class MonsterDamageHandler : MonoBehaviour {
     private void Die() {
 
         //run randomizer. 1/10 chance to get powerup
-        int lucky = (int)(Random.Range(1f, 9.999999f));
+        int lucky = (int)(Random.Range(1f, 19.999999f));
 
         //initalize powerup, at position of monster, looking straight up
-        if (lucky == 1)
+        if (lucky <= 2)
             Instantiate(powerupPrefab, transform.position, Quaternion.identity);
 
+        //chance to drop an urchin
+        if(lucky == 3)
+            Instantiate(urchinPrefab, transform.position, Quaternion.identity);
+
+        //delete monster
         Destroy(gameObject);
     }
 }

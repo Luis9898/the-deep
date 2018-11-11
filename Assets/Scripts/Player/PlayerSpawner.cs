@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour {
 
     public GameObject playerPrefab;
-    GameObject playerInstance;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +13,6 @@ public class PlayerSpawner : MonoBehaviour {
 
     //spawns the player
     void spawnPlayer() {
-        playerInstance = (GameObject)Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        Instantiate(playerPrefab, transform.position, Quaternion.identity);
     }
 }

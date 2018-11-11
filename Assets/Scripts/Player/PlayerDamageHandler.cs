@@ -61,8 +61,7 @@ public class PlayerDamageHandler : MonoBehaviour {
 
     //displayed health on upper left corner
     private void OnGUI() {
-        if (juggerTimerMax > 0)
-            GUI.Label(new Rect(0, 0, 100, 50), "Health: " + health);
+        GUI.Label(new Rect(0, 0, 100, 50), "Health: " + health);
     }
 
 

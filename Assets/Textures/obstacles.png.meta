@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 4af5e9b1bdf7edc439484ae186df21ad
 TextureImporter:
   fileIDToRecycleName:
-    21300000: obstacles_0
+    21300000: Level1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -61,7 +61,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -72,7 +72,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -83,7 +83,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -96,15 +96,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obstacles_0
+      name: Level1
       rect:
         serializedVersion: 2
-        x: 534
-        y: 753
-        width: 3630
-        height: 2372
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10756
+        y: 1068
+        width: 2966
+        height: 2008
+      alignment: 9
+      pivot: {x: 0.4950985, y: 0.49249896}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

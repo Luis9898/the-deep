@@ -13,14 +13,14 @@ public class PlayerMove : MonoBehaviour {
     public float speedupTimerMax = 10f;               //max time for speedup
     public float speedupTimer = 0f;                  //time remaining for speedup
 
-    private float screen_ratio;
-    private float width_ortho;
+    //private float screen_ratio;
+    //private float width_ortho;
 
 	// Use this for initialization
 	void Start () {
         //get screen width and height. NOT currently used
-        screen_ratio = 1.0f * Screen.width / Screen.height;
-        width_ortho = screen_ratio * Camera.main.orthographicSize;
+        //screen_ratio = 1.0f * Screen.width / Screen.height;
+        //width_ortho = screen_ratio * Camera.main.orthographicSize;
 
         //get rigidbody, add drag to prevent superspeed
         rb = GetComponent<Rigidbody2D>();

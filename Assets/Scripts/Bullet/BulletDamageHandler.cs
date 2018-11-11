@@ -20,7 +20,12 @@ public class BulletDamageHandler : MonoBehaviour {
 
     //detect a collision (use rigid body, no triggers)
     private void OnCollisionEnter2D(Collision2D collision) {
-        health--;
+
+        //if collision with terrain, delete immediately
+        if (collision.gameObject.layer == 13)
+            health = 0;
+        else
+            health--;
     }
 
     //execute upon object death
