@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour {
     // Using rigidbody to give a more 'underwater-like' movement
     void FixedUpdate()
     {
-        mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouse_pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
         mouse_dir = mouse_pos - gameObject.transform.position;
         mouse_pos.z = 0.0f;
         mouse_dir = mouse_dir.normalized;
