@@ -4,30 +4,18 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour {
 
-    Transform player;           //transform of playerAI
+    GameObject player;                  //player object (to give powerup)
     float angVel = 180f;        //angular velocity (to prevent automatic turning)
 
     // Use this for initialization
     void Start () {
-		//nop
-	}
+        player = GameObject.FindWithTag("Player");                  //find player object
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if(player == null) {
-            //find player (in case deleted)
-            GameObject go = GameObject.FindWithTag("Player");
-
-            if(go != null)
-                player = go.transform;
-        }
-
-        //if player still not found, end this iteration
-        if (player == null)
-            return;
-
         //find direction to player, normalize
-        Vector3 dirToPlayer = player.position - transform.position;
+        Vector3 dirToPlayer = player.transform.position - transform.position;
         dirToPlayer.Normalize();
 
         //rotate in said direction (slowly)

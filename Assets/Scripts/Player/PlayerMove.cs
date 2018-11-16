@@ -6,9 +6,9 @@ public class PlayerMove : MonoBehaviour {
 
     private Vector3 mouse_pos;
     private Vector3 mouse_dir;
-    public float maxSpeed = 100;
+    public float maxSpeed = 5;
     Rigidbody2D rb;
-    int force = 25;
+    int force = 40;
 
     public float speedupTimerMax = 10f;               //max time for speedup
     public float speedupTimer = 0f;                  //time remaining for speedup

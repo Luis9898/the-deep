@@ -15,7 +15,6 @@ public class PowerupHandler : MonoBehaviour {
         powerupSelect = (int)(Random.Range(1f, 5.999999f));
         health = 1;
         player = GameObject.FindWithTag("Player");                  //find player object
-        Debug.Log("num = " + powerupSelect);
     }
 
     private void Update()
