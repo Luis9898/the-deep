@@ -61,7 +61,7 @@ public class PlayerDamageHandler : MonoBehaviour {
 
     //displayed health on upper left corner
     private void OnGUI() {
-        GUI.Label(new Rect(0, 0, 100, 50), "Health: " + health);
+        GUI.Label(new Rect(25, 0, 100, 50), "Health: " + health);
     }
 
 

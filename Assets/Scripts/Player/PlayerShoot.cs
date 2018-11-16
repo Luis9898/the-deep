@@ -9,7 +9,6 @@ public class PlayerShoot: MonoBehaviour
     private float cooldown;
     private int powerup;
     private int shottyTimer;
-    private int leadTimer;
     public int fastTimer;
 
     public GameObject bulletPrefab;
@@ -20,7 +19,6 @@ public class PlayerShoot: MonoBehaviour
         cooldown = 0f;
         powerup = 0;
         shottyTimer = 0;
-        leadTimer = 0;
     }
 
     // Update is called once per frame
@@ -49,8 +47,6 @@ public class PlayerShoot: MonoBehaviour
             {
                 if(powerup == 1)
                     shottyTimer = 20;
-                else if(powerup == 2)
-                    leadTimer = 20;
                 powerup = 0;
             }
 
@@ -66,15 +62,6 @@ public class PlayerShoot: MonoBehaviour
                 d.layer = LayerMask.NameToLayer("Bullet");
 
                 shottyTimer--;
-            }
-
-            //if lead powerup active
-            if(leadTimer > 0)
-            {
-                //make the bullet 3x penatrable
-                b.GetComponent<BulletDamageHandler>().health = 3;
-
-                leadTimer--;
             }
         }
     }

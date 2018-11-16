@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\Powerup\PowerupHandler.cs" />
+    <Compile Include="Assets\Scripts\Textures\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Textures\MovingBackground.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Users/reaga/Documents/unityProjects/The_Deep/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

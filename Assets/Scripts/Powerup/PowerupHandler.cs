@@ -12,7 +12,7 @@ public class PowerupHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        powerupSelect = (int)(Random.Range(1f, 6.999999f));
+        powerupSelect = (int)(Random.Range(1f, 5.999999f));
         health = 1;
         player = GameObject.FindWithTag("Player");                  //find player object
         Debug.Log("num = " + powerupSelect);
@@ -36,24 +36,24 @@ public class PowerupHandler : MonoBehaviour {
     {
 
         //if 1 (shotgun) or 2 (lead bullets)
-        if (powerupSelect == 1 || powerupSelect == 2)
+        if (powerupSelect == 1)
             player.GetComponent<PlayerShoot>().receivePowerup(powerupSelect);
 
-        //if 3 (add health)
-        else if (powerupSelect == 3)
+        //if 2 (add health)
+        else if (powerupSelect == 2)
             player.GetComponent<PlayerDamageHandler>().health++;
 
-        //if 4 (grant invincibility)
-        else if (powerupSelect == 4)
+        //if 3 (grant invincibility)
+        else if (powerupSelect == 3)
             player.GetComponent<PlayerDamageHandler>().juggerTimer = 10;
 
-        //if 5 (speed up)
-        else if (powerupSelect == 5)
+        //if 4 (speed up)
+        else if (powerupSelect == 4)
             player.GetComponent<PlayerMove>().speedupTimer = 10;
 
-        //if 6 (rapidfire)
+        //if 5 (rapidfire)
         else
-            player.GetComponent<PlayerShoot>().fastTimer = 60;
+            player.GetComponent<PlayerShoot>().fastTimer = 40;
 
         Destroy(gameObject);
     }

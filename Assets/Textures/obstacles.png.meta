@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 4af5e9b1bdf7edc439484ae186df21ad
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Level1
+    21300000: Level2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,13 +41,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 606, y: 468, z: 11762, w: 0}
+  spriteBorder: {x: 0, y: 6, z: 1, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -64,7 +64,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +86,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level1
+      name: Level2
       rect:
         serializedVersion: 2
-        x: 10756
-        y: 1068
-        width: 2966
-        height: 2008
+        x: 12919
+        y: 1082
+        width: 3096
+        height: 2026
       alignment: 9
       pivot: {x: 0.4950985, y: 0.49249896}
       border: {x: 0, y: 0, z: 0, w: 0}
