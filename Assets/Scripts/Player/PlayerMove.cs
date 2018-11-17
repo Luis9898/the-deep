@@ -30,16 +30,20 @@ public class PlayerMove : MonoBehaviour {
     // Using rigidbody to give a more 'underwater-like' movement
     void FixedUpdate()
     {
-        mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Touch touch = Input.GetTouch(0);
+        mouse_pos = Camera.main.ScreenToWorldPoint(touch.position);
+
+        //mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouse_dir = mouse_pos - gameObject.transform.position;
         mouse_pos.z = 0.0f;
         mouse_dir = mouse_dir.normalized;
 
         //if right mouse button held down
-        if (Input.GetMouseButton(1))
+        if(Input.touchCount > 0)
+        //if (Input.GetMouseButton(1))
         {
             rb.AddForce(mouse_dir * force);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(touch.position) - transform.position);
         }
 
         //set max speed (in case surpassed)

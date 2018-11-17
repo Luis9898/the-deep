@@ -2,7 +2,7 @@ Android
 PlayerPath?
 D:/Users/reaga/Documents/unityProjects/The_Deep/AndroidBuilds/test.apk
 SceneListBegin?
-Assets/Scenes/SampleScene.unity
+Assets/Scenes/Level1.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
