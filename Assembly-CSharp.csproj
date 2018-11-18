@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\HighScore\HighScore4test.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore5test.cs" />
     <Compile Include="Assets\Scripts\HighScore\Score2.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\Monster\FacePlayer.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterMove.cs" />
@@ -82,9 +83,24 @@
     <Compile Include="Assets\Scripts\Player\PlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\Player\Score.cs" />
     <Compile Include="Assets\Scripts\Powerup\PowerupHandler.cs" />
+    <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\Textures\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Textures\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\Textures\ChangeColorBackground.cs" />
     <Compile Include="Assets\Scripts\Textures\MovingBackground.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\DragMe.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\DropMe.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\Unity UI Sample\Scripts\TiltWindow.cs" />
+    <None Include="Assets\Unity UI Sample\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Unity UI Sample\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\Unity UI Sample\Materials\UI-Default-No-Alpha.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Users/reaga/Documents/unityProjects/The_Deep/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
