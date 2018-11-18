@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5e609d981d68244ba8006795d1c4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.03
 --- !u!114 &114303907945630580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a1d53319c8c87429ebc8dd401fe7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &114641945017663874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +130,7 @@ MonoBehaviour:
     type: 2}
   urchinPrefab: {fileID: 1403016115295486, guid: 219fcbc002300ce45bde271e8ed24403,
     type: 2}
+  monsterSpawnerPrefab: {fileID: 0}
 --- !u!212 &212865834553491752
 SpriteRenderer:
   m_ObjectHideFlags: 1

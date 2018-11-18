@@ -8,6 +8,8 @@ MonoImporter:
       type: 2}
   - urchinPrefab: {fileID: 1403016115295486, guid: 219fcbc002300ce45bde271e8ed24403,
       type: 2}
+  - monsterSpawnerPrefab: {fileID: 1704183205315296, guid: 156a93312d066534780d172157050961,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

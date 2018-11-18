@@ -21,11 +21,9 @@ public class ChangeColor : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        float x = transform.position.x;
+        float y = transform.position.y / 200 + 1;
 
-        m_Blue = 1 - (x%60) /60;
-
-        m_NewColor = new Color(m_Red, m_Green, m_Blue);
+        m_NewColor = new Color(y, y, y);
 
         //Set the SpriteRenderer to the Color defined by the Sliders
         m_SpriteRenderer.color = m_NewColor;

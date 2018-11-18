@@ -7,6 +7,7 @@ public class MonsterDamageHandler : MonoBehaviour {
     public int health = 1;                          //health of object
     public GameObject powerupPrefab;                //used to create powerup (upon monster death)
     public GameObject urchinPrefab;                 //used to create urchin
+    public GameObject monsterSpawnerPrefab;
 
 
     // Use this for initialization
@@ -32,6 +33,10 @@ public class MonsterDamageHandler : MonoBehaviour {
         if (collision.gameObject.layer != 13) {
             health--;
         }
+
+        else if(gameObject.tag == "Urchin") {
+            Die();
+        }
     }
 
 
@@ -49,7 +54,24 @@ public class MonsterDamageHandler : MonoBehaviour {
         if(lucky == 3)
             Instantiate(urchinPrefab, transform.position, Quaternion.identity);
 
+        //if urchin, spawn more monsters (depending on scale)
+        if(gameObject.tag == "Urchin") {
+            int spawnNum = (int)(gameObject.transform.localScale.x);
+
+            GameObject monsterspawn = Instantiate(monsterSpawnerPrefab, transform.position, Quaternion.identity);
+
+            for (int i = 0; i < spawnNum; i++) {
+                monsterspawn.GetComponent<MonsterSpawner>().spawnMonster();
+            }
+            Debug.Log("urchin level = " + spawnNum);
+
+            Destroy(monsterspawn);
+        }
+
         //delete monster
         Destroy(gameObject);
+
+        //update player score
+        GameObject.FindWithTag("Player").GetComponent<Score>().scoreBuffer++;
     }
 }

@@ -22,10 +22,7 @@ public class BulletDamageHandler : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if collision with terrain, delete immediately
-        if (collision.gameObject.layer == 13)
-            health = 0;
-        else
-            health--;
+        health = 0;
     }
 
     //execute upon object death

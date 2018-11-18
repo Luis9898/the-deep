@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114593841304551956}
   m_Layer: 8
   m_Name: UrchinObject
-  m_TagString: Untagged
+  m_TagString: Urchin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -91,10 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e596f87d8266b4bada2263f1d81cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 10
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
   urchinPrefab: {fileID: 1403016115295486}
+  monsterSpawnerPrefab: {fileID: 0}
 --- !u!114 &114593841304551956
 MonoBehaviour:
   m_ObjectHideFlags: 1

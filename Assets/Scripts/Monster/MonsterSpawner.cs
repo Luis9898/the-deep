@@ -37,10 +37,8 @@ public class MonsterSpawner : MonoBehaviour
     }
 
     //spawns the monster
-    void spawnMonster()
+    public void spawnMonster()
     {
-        
-
         int monstertype = (int)(Random.Range(1f, 2.999999f));
 
         //if 1, spawn the fast (but weak) monster

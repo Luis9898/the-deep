@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour {
 
-    GameObject player;                  //player object (to give powerup)
+    public GameObject player;                  //player object (to give powerup)
     float angVel = 180f;        //angular velocity (to prevent automatic turning)
 
     // Use this for initialization
