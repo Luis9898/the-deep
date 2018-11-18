@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Users/reaga/Documents/unityProjects/The_Deep/AndroidBuilds/test.apk
+D:/Users/reaga/Documents/unityProjects/The_Deep/AndroidBuilds/asdf.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Level1.unity
