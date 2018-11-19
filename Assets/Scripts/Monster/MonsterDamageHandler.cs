@@ -82,6 +82,6 @@ public class MonsterDamageHandler : MonoBehaviour {
         Destroy(gameObject);
 
         //update player score
-        GameObject.FindWithTag("Player").GetComponent<Score>().scoreBuffer++;
+        GameObject.FindWithTag("Player").GetComponent<CalculateScore>().scoreBuffer++;
     }
 }

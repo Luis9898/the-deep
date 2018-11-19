@@ -21,7 +21,7 @@ public class LevelDetector : MonoBehaviour {
 	// Update is called once per frame
 	private void Update () {
 		if(gameObject.transform.position.y < depths[pos]) {
-            gameObject.GetComponent<Score>().level = levels[pos];
+            gameObject.GetComponent<CalculateScore>().level = levels[pos];
             pos++;
 
             Debug.Log("Now on Level: " +  levels[pos - 1]);

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDamageHandler : MonoBehaviour {
 
@@ -66,10 +67,11 @@ public class PlayerDamageHandler : MonoBehaviour {
 
     //execute upon object death
     private void Die() {
+        //update static variable score
+        CurrentScore.Score = gameObject.GetComponent<CalculateScore>().score;
 
-        //end game code here
-
-        Destroy(gameObject);
+        //go to high score scene
+        SceneManager.LoadScene(2);
     }
 
 
