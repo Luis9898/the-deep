@@ -9,10 +9,15 @@ public class PlayerDamageHandler : MonoBehaviour {
     public float juggerTimer = 0f;                  //time remaining for invulnerability
     int defaultLayer;                               //default layer for object (in case of modification)
 
+    SpriteRenderer m_SpriteRenderer;            //The Color to be assigned to the Renderer’s Material
+    Color m_NewColor;
+
 
     // Use this for initialization
     private void Start() {
-        defaultLayer = gameObject.layer;            //assign default layer, in case of later modification
+        defaultLayer = gameObject.layer;                            //assign default layer, in case of later modification
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();          //get SpriteRenderer (for transparency during invincibility)
+
     }
 
     // Update is called once per frame
@@ -23,8 +28,17 @@ public class PlayerDamageHandler : MonoBehaviour {
         if (juggerTimer > 0) {
             gameObject.layer = 10;
             juggerTimer -= Time.deltaTime;
-        } else
+
+            //make sprite transparent
+            m_NewColor = new Color(1, 1, 1, .5f);
+            m_SpriteRenderer.color = m_NewColor;
+        } else {
             gameObject.layer = defaultLayer;
+
+            //make sprite opaque
+            m_NewColor = new Color(1, 1, 1);
+            m_SpriteRenderer.color = m_NewColor;
+        }
 
         //check for health inside Update() to prevent sync issues
         if (health <= 0)

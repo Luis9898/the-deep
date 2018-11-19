@@ -8,7 +8,7 @@ using UnityEngine.AI;
 //object moves in a straight line from which it is facing
 public class MonsterMove : MonoBehaviour
 {
-    public float speed = .05f;
+    public float speed = 30f;
 
     //private float screen_ratio;
     //private float width_ortho;
@@ -23,6 +23,6 @@ public class MonsterMove : MonoBehaviour
     //use transform.Translate to use the rigidbody (NOT transform.position)
     private void Update()
     {
-        transform.Translate(0, speed, 0);
+        transform.Translate(0, speed*Time.deltaTime, 0);
     }
 }

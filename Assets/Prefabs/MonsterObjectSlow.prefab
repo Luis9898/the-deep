@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114930535633466582}
   - component: {fileID: 61957004910732676}
   - component: {fileID: 50564761503591650}
+  - component: {fileID: 114998334743505700}
   m_Layer: 8
   m_Name: MonsterObjectSlow
   m_TagString: Untagged
@@ -106,7 +107,8 @@ MonoBehaviour:
     type: 2}
   urchinPrefab: {fileID: 1403016115295486, guid: 219fcbc002300ce45bde271e8ed24403,
     type: 2}
-  monsterSpawnerPrefab: {fileID: 0}
+  monsterPrefabSlow: {fileID: 0}
+  monsterPrefabFast: {fileID: 0}
 --- !u!114 &114905559484345544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,7 +132,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5e609d981d68244ba8006795d1c4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.02
+  speed: 0.7
+--- !u!114 &114998334743505700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998963686792842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3a0491573a1a7488228aa5322d8e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 15
 --- !u!212 &212274637760375102
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ using UnityEngine;
 //bullet always moves in straight line from which it started
 public class BulletMove : MonoBehaviour {
 
-    public float speed = .08f;
+    public float speed = 2f;
 
     //private float screen_ratio;
     //private float width_ortho;
@@ -18,6 +18,6 @@ public class BulletMove : MonoBehaviour {
 
     //use transform.Translate to use the rigidbody (NOT transform.position)
     private void Update() {
-        transform.Translate(0, speed, 0);
+        transform.Translate(0, speed*Time.deltaTime, 0);
     }
 }

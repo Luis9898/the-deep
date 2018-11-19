@@ -7,7 +7,10 @@ public class MonsterDamageHandler : MonoBehaviour {
     public int health = 1;                          //health of object
     public GameObject powerupPrefab;                //used to create powerup (upon monster death)
     public GameObject urchinPrefab;                 //used to create urchin
-    public GameObject monsterSpawnerPrefab;
+
+    public GameObject monsterPrefabSlow;                //monster object, to later be modified for various types
+    public GameObject monsterPrefabFast;                //monster object, to later be modified for various types
+    GameObject monsterInstance;
 
 
     // Use this for initialization
@@ -56,16 +59,23 @@ public class MonsterDamageHandler : MonoBehaviour {
 
         //if urchin, spawn more monsters (depending on scale)
         if(gameObject.tag == "Urchin") {
-            int spawnNum = (int)(gameObject.transform.localScale.x);
-
-            GameObject monsterspawn = Instantiate(monsterSpawnerPrefab, transform.position, Quaternion.identity);
+            int spawnNum = 2*(int)(gameObject.transform.localScale.x);
 
             for (int i = 0; i < spawnNum; i++) {
-                monsterspawn.GetComponent<MonsterSpawner>().spawnMonster();
-            }
-            Debug.Log("urchin level = " + spawnNum);
+                int monstertype = (int)(Random.Range(1f, 2.999999f));
 
-            Destroy(monsterspawn);
+                //if 1, spawn the fast (but weak) monster
+                if (monstertype == 1) {
+                    monsterInstance = (GameObject)Instantiate(monsterPrefabFast, transform.position, Quaternion.identity);
+                    monsterInstance.transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+                }
+
+                //if 2, spawn the slow (but strong) monster)
+                else {
+                    monsterInstance = (GameObject)Instantiate(monsterPrefabSlow, transform.position, Quaternion.identity);
+                    monsterInstance.transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+                }
+            }
         }
 
         //delete monster

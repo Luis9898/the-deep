@@ -95,7 +95,10 @@ MonoBehaviour:
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
   urchinPrefab: {fileID: 1403016115295486}
-  monsterSpawnerPrefab: {fileID: 0}
+  monsterPrefabSlow: {fileID: 1434774977851948, guid: dd740e70edd3a764886b6a758ec03f6a,
+    type: 2}
+  monsterPrefabFast: {fileID: 1998963686792842, guid: 8f2d6faae7c395e46aec34ef92c70ee2,
+    type: 2}
 --- !u!114 &114593841304551956
 MonoBehaviour:
   m_ObjectHideFlags: 1
