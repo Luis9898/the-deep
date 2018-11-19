@@ -2,14 +2,16 @@ fileFormatVersion: 2
 guid: 6cfb007bab3de164fa744b9481ae0082
 TextureImporter:
   fileIDToRecycleName:
-    21300000: player_sprite
-    21300002: All_0
+    21300000: PlayerSprite
+    21300002: LockedDoor
     21300004: All_1
-    21300006: enemy_1
-    21300008: bullet
-    21300010: All_2
-    21300012: fatenemy
-    21300014: urchin
+    21300006: FastEnemy
+    21300008: BulletSprite
+    21300010: PowerupSprite
+    21300012: FatEnemy
+    21300014: UrchinSprite
+    21300016: Key
+    21300018: TorpedoSprite
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -103,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_sprite
+      name: PlayerSprite
       rect:
         serializedVersion: 2
-        x: 246
+        x: 153
         y: 153
-        width: 36
-        height: 45
+        width: 31
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,56 +125,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_0
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 201
-        width: 14
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7dfa693411b67545912a60467d7a18c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_1
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 200
-        width: 1
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6101c6423af38d409bf742f02ec1567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_1
+      name: FastEnemy
       rect:
         serializedVersion: 2
         x: 246
         y: 0
         width: 36
-        height: 48
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -183,16 +145,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullet
+      name: BulletSprite
       rect:
         serializedVersion: 2
         x: 5
         y: 51
-        width: 37
+        width: 34
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -203,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_2
+      name: PowerupSprite
       rect:
         serializedVersion: 2
         x: 53
@@ -223,16 +185,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fatenemy
+      name: FatEnemy
       rect:
         serializedVersion: 2
-        x: 145
+        x: 150
         y: 51
-        width: 41
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 0, z: 0, w: 1}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -243,21 +205,81 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: urchin
+      name: UrchinSprite
       rect:
         serializedVersion: 2
-        x: 150
-        y: 118
-        width: 36
-        height: 30
+        x: 57
+        y: 117
+        width: 31
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 2, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 25d5acb6aebe34d46a2e7d1f39aa71fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Key
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 153
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a825bbafc875d944aa109d9cefd7a11a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LockedDoor
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 74
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a14f53b1f02dec4eb33cf5205981ad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorpedoSprite
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 0, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd3f6c18c40ebe4d823abec9006836b
       vertices: []
       indices: 
       edges: []

@@ -71,11 +71,15 @@
     <Compile Include="Assets\Scripts\HighScore\HighScore4test.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore5test.cs" />
     <Compile Include="Assets\Scripts\HighScore\Score.cs" />
+    <Compile Include="Assets\Scripts\Key\KeyCount.cs" />
+    <Compile Include="Assets\Scripts\Key\KeyHandler.cs" />
+    <Compile Include="Assets\Scripts\Key\LockedDoorHandler.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\Monster\FacePlayer.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterMove.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterSpawner.cs" />
+    <Compile Include="Assets\Scripts\Monster\TorpedoHandler.cs" />
     <Compile Include="Assets\Scripts\Monster\UrchinGrow.cs" />
     <Compile Include="Assets\Scripts\PauseMenu\DisablePause.cs" />
     <Compile Include="Assets\Scripts\PauseMenu\EnablePause.cs" />
