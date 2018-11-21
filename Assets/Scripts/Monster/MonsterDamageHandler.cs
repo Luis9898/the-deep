@@ -78,10 +78,10 @@ public class MonsterDamageHandler : MonoBehaviour {
             }
         }
 
-        //delete monster
-        Destroy(gameObject);
-
         //update player score
         GameObject.FindWithTag("Player").GetComponent<CalculateScore>().scoreBuffer++;
+
+        //delete monster
+        Destroy(gameObject);
     }
 }

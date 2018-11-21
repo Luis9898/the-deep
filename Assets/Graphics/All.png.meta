@@ -4,7 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: PlayerSprite
     21300002: LockedDoor
-    21300004: All_1
+    21300004: Balloon_Sprite
     21300006: FastEnemy
     21300008: BulletSprite
     21300010: PowerupSprite
@@ -12,6 +12,7 @@ TextureImporter:
     21300014: UrchinSprite
     21300016: Key
     21300018: TorpedoSprite
+    21300020: All_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -273,13 +274,53 @@ TextureImporter:
         width: 33
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 2, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 0cd3f6c18c40ebe4d823abec9006836b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 120
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca06f1a7db6161a4895789f85eb17531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balloon_Sprite
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 119
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f501dd895ffe4534a8edc99ab9e343d1
       vertices: []
       indices: 
       edges: []
