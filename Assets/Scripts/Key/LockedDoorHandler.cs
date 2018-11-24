@@ -6,12 +6,13 @@ public class LockedDoorHandler : MonoBehaviour {
 
     public GameObject torpedoPrefab;
     public bool unleashTheBoi;
+    public int requiredkeys;
 
     //detect a collision (use rigid body, no triggers)
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if key collides with player
-        if (collision.gameObject.layer == 9 && KeyCount.Keys > 0) {
+        if (collision.gameObject.layer == 9 && KeyCount.Keys == requiredkeys) {
 
             //kys
             Die();

@@ -15,7 +15,7 @@ public class PlayerShoot: MonoBehaviour
 
     // Use this for initialization
     void Start() {
-        firedelay = .8f;
+        firedelay = .5f;
         cooldown = 0f;
         powerup = 0;
         shottyTimer = 0;
@@ -29,9 +29,9 @@ public class PlayerShoot: MonoBehaviour
         if (cooldown <= 0)
         {
             if (fastTimer > 0)
-                firedelay = .5f;
+                firedelay = .4f;
             else
-                firedelay = .8f;
+                firedelay = .5f;
             fastTimer--;
 
             cooldown = firedelay;

@@ -8,8 +8,8 @@ using UnityEngine.AI;
 //object moves in a straight line from which it is facing
 public class MonsterMove : MonoBehaviour
 {
-    public float speed = 30f;
-
+    public float speed;
+    Rigidbody2D rb;
     //private float screen_ratio;
     //private float width_ortho;
 
@@ -18,11 +18,15 @@ public class MonsterMove : MonoBehaviour
         //get screen width and height (NOT currently used)
         //screen_ratio = 1.0f * Screen.width / Screen.height;
         //width_ortho = screen_ratio * Camera.main.orthographicSize;
+
+        //get monster's rigid body
+        rb = GetComponent<Rigidbody2D>();
+
     }
 
     //use transform.Translate to use the rigidbody (NOT transform.position)
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.Translate(0, speed*Time.deltaTime, 0);
+        rb.AddForce(transform.up * speed);
     }
 }

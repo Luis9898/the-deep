@@ -45,6 +45,7 @@ public class PlayerMove : MonoBehaviour {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, mouse_pos - transform.position);
         }
 
+
         //set max speed (in case surpassed)
         if (rb.velocity.magnitude > maxSpeed)
             rb.velocity = rb.velocity.normalized * maxSpeed;

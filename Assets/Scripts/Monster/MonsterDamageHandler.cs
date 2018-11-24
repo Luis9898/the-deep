@@ -10,6 +10,7 @@ public class MonsterDamageHandler : MonoBehaviour {
 
     public GameObject monsterPrefabSlow;                //monster object, to later be modified for various types
     public GameObject monsterPrefabFast;                //monster object, to later be modified for various types
+    public GameObject keyPrefab;
     GameObject monsterInstance;
 
 
@@ -33,7 +34,7 @@ public class MonsterDamageHandler : MonoBehaviour {
 
         //if not colliding colliding with terrain, deduct health.
         //NOTE: monsters cannot collide with other monsters (possibly change later)
-        if (collision.gameObject.layer != 13) {
+        if (collision.gameObject.layer != 13 && collision.gameObject.layer != 14) {
             health--;
         }
 
@@ -76,6 +77,10 @@ public class MonsterDamageHandler : MonoBehaviour {
                     monsterInstance.transform.rotation = Quaternion.LookRotation(Vector3.forward, Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
                 }
             }
+        }
+
+        if(gameObject.tag == "BouncyBoi") {
+            Instantiate(keyPrefab, transform.position, Quaternion.identity);
         }
 
         //update player score

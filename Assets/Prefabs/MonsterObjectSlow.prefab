@@ -58,7 +58,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -80,9 +80,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.05, y: 0, z: 0, w: 0.010000001}
+    border: {x: 0, y: 0, z: 0, w: 0.010000001}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.41, y: 0.46}
+    oldSize: {x: 0.36, y: 0.46}
     newSize: {x: 0.36, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5e609d981d68244ba8006795d1c4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.7
+  speed: 1
 --- !u!114 &114998334743505700
 MonoBehaviour:
   m_ObjectHideFlags: 1

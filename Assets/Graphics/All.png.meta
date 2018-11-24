@@ -13,6 +13,7 @@ TextureImporter:
     21300016: Key
     21300018: TorpedoSprite
     21300020: All_0
+    21300022: BouncySprite
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -294,7 +295,7 @@ TextureImporter:
         width: 29
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,13 +315,33 @@ TextureImporter:
         width: 27
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f501dd895ffe4534a8edc99ab9e343d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BouncySprite
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 153
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8bdf9303d936c48976336203b7dd66
       vertices: []
       indices: 
       edges: []
