@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\Textures\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Textures\ChangeColorBackground.cs" />
     <Compile Include="Assets\Scripts\Textures\MovingBackground.cs" />
+    <Compile Include="Assets\Scripts\Treasure.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Unity UI Sample\Scripts\ChangeColor.cs" />

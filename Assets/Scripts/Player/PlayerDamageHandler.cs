@@ -51,7 +51,7 @@ public class PlayerDamageHandler : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if player collision with monster
-        if (collision.gameObject.layer == 8) {
+        if (collision.gameObject.layer == 8 || collision.gameObject.layer == 15) {
             if (juggerTimer <= 0) {
                 health--;
 

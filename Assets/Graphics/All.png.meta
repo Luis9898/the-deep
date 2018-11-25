@@ -14,6 +14,7 @@ TextureImporter:
     21300018: TorpedoSprite
     21300020: All_0
     21300022: BouncySprite
+    21300024: Treasure
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -335,13 +336,33 @@ TextureImporter:
         width: 36
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: cc8bdf9303d936c48976336203b7dd66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasure
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 7
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ac776219349d049938f424089bd8a9
       vertices: []
       indices: 
       edges: []
