@@ -28,7 +28,7 @@ public class MonsterSpawner : MonoBehaviour
     {
         //spawn monster every (timeToSpawn) time (public variable)
         timeToSpawn -= Time.deltaTime;
-        if (timeToSpawn <= 0)
+        if (timeToSpawn <= 0 && Vector3.Distance(transform.position, player.position) < 25)
         {
             spawnMonster();
             timeToSpawn = monsterDelay;

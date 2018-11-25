@@ -109,6 +109,7 @@ MonoBehaviour:
     type: 2}
   monsterPrefabSlow: {fileID: 0}
   monsterPrefabFast: {fileID: 0}
+  keyPrefab: {fileID: 0}
 --- !u!114 &114905559484345544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  maxSpeed: 4
 --- !u!114 &114998334743505700
 MonoBehaviour:
   m_ObjectHideFlags: 1

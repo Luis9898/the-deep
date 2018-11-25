@@ -9,6 +9,7 @@ using UnityEngine.AI;
 public class MonsterMove : MonoBehaviour
 {
     public float speed;
+    public float maxSpeed;
     Rigidbody2D rb;
     //private float screen_ratio;
     //private float width_ortho;
@@ -28,5 +29,8 @@ public class MonsterMove : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(transform.up * speed);
+
+        if (rb.velocity.magnitude > maxSpeed)
+            rb.velocity = rb.velocity.normalized * maxSpeed;
     }
 }

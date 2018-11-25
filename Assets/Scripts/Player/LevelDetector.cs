@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class LevelDetector : MonoBehaviour {
 
-    public struct LevelDetect {
-        public int level;               //level
-        public int y;                   //y value corresponding to level
-    }
-
     int[] levels = new int[] { 1, 2, 3, 4, 5 };
     int[] depths = new int[] { 0, -50, -100, -150, -200 };
     int pos;
@@ -21,10 +16,15 @@ public class LevelDetector : MonoBehaviour {
 	// Update is called once per frame
 	private void Update () {
 		if(gameObject.transform.position.y < depths[pos]) {
-            gameObject.GetComponent<CalculateScore>().level = levels[pos];
+            CurrentScore.Level = levels[pos];
             pos++;
 
-            Debug.Log("Now on Level: " +  levels[pos - 1]);
+            Debug.Log("Now on Level: " +  CurrentScore.Level);
         }
 	}
+
+    private void OnGUI() {
+        GUI.Label(new Rect(20, Screen.height - 50, 128, 128), "Level: " + CurrentScore.Level);
+        GUI.Label(new Rect(20, Screen.height - 25, 128, 128), "Score: " + CurrentScore.Score);
+    }
 }

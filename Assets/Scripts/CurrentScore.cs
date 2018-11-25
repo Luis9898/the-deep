@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class CurrentScore {
     private static int score;
+    private static int level;
 
     public static int Score {
         get {
@@ -11,6 +12,15 @@ public static class CurrentScore {
         }
         set {
             score = value;
+        }
+    }
+
+    public static int Level {
+        get {
+            return level;
+        }
+        set {
+            level = value;
         }
     }
 }

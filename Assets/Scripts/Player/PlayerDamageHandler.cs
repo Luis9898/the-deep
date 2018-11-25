@@ -67,9 +67,6 @@ public class PlayerDamageHandler : MonoBehaviour {
 
     //execute upon object death
     private void Die() {
-        //update static variable score
-        CurrentScore.Score = gameObject.GetComponent<CalculateScore>().score;
-
         //go to high score scene
         SceneManager.LoadScene(2);
     }

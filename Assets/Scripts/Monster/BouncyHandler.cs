@@ -5,6 +5,7 @@ using UnityEngine;
 public class BouncyHandler : MonoBehaviour {
 
     public float speed;
+    public float maxSpeed;
     Rigidbody2D rb;
 
     // Use this for initialization
@@ -17,5 +18,8 @@ public class BouncyHandler : MonoBehaviour {
 	void FixedUpdate () {
         rb.AddForce(transform.up * speed);
         rb.MoveRotation(rb.rotation + 5);
+
+        if (rb.velocity.magnitude > maxSpeed)
+            rb.velocity = rb.velocity.normalized * maxSpeed;
     }
 }
