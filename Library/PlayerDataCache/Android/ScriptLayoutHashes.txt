@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Users/reaga/Documents/unityProjects/the-deep/AndroidBuilds/final_draft1.apk
+/Users/Luis/Desktop/apks/Beta.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Level1.unity
@@ -125,6 +125,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ActiveStateToggler
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HighScore1test
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.BalloonHandler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DisablePause
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -137,6 +138,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 dae48ecdf92f05e7ccdb661bbc3cc9cc Assembly-CSharp.dll:.Pause
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Treasure
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.KeyHandler
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 3cb945a7574ed3b38d63b4e06537262c Assembly-CSharp.dll:.DropMe
@@ -195,7 +197,7 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 ff7ceaab7b667348f8ffb50c3ef5d93a Assembly-CSharp.dll:.BulletDamageHandler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LevelDetector
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HighScore
+cd86c60874bd545934f39adf94bdc31a Assembly-CSharp.dll:.HighScore
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.LoadSceneOnClick
 2f48983e1e4572bcddd752423f7dbea2 Assembly-CSharp.dll:.ScrollDetailTexture
 c1120434be76081af114a1a7f5102df6 Assembly-CSharp.dll:.MonsterMove
@@ -210,4 +212,3 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ApplicationManager
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ChangeColor
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Treasure
