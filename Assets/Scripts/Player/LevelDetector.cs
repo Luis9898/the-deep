@@ -28,7 +28,20 @@ public class LevelDetector : MonoBehaviour {
     }
 
     private void OnGUI() {
-        GUI.Label(new Rect(20, Screen.height - 50, 128, 128), "Level: " + CurrentScore.Level);
-        GUI.Label(new Rect(20, Screen.height - 25, 128, 128), "Score: " + CurrentScore.Score);
+
+        GUIStyle HealthGUI = new GUIStyle();
+
+        HealthGUI.fontSize = 20;
+
+        HealthGUI.normal.textColor = Color.black;
+
+        GUI.Label(new Rect(12, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+        GUI.Label(new Rect(8, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+        GUI.Label(new Rect(10, 63, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+        GUI.Label(new Rect(10, 67, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+
+        HealthGUI.normal.textColor = Color.white;
+
+        GUI.Label(new Rect(10, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
     }
 }

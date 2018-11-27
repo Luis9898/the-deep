@@ -16,6 +16,10 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        score.text = "Score: " + curScore;
+        //GUI.Label(new Rect(25, 0, 100, 50), "Health: " + health);
+        if (HighScore.curHighScore == 0)
+            score.text = "Score: " + curScore;
+        else
+            score.text = "";
 	}
 }

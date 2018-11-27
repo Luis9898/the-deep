@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Bullet\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\CurrentScore.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore.cs" />
+    <Compile Include="Assets\Scripts\HighScore\HighScore1test.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore2test.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore3test.cs" />
     <Compile Include="Assets\Scripts\HighScore\HighScore4test.cs" />

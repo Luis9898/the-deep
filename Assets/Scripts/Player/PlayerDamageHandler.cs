@@ -66,15 +66,36 @@ public class PlayerDamageHandler : MonoBehaviour {
 
 
     //execute upon object death
-    private void Die() {
+    private void Die()
+    {
+        //Updates the highscore and checks it against the list. Inserts highscore into the list.
+        HighScore.curHighScore = CurrentScore.Score;
+        HighScore.checkHS();
+        
+
         //go to high score scene
         SceneManager.LoadScene(2);
     }
 
 
     //displayed health on upper left corner
-    private void OnGUI() {
-        GUI.Label(new Rect(100, 0, 100, 50), "Health: " + health);
+    private void OnGUI()
+    {
+
+        GUIStyle HealthGUI = new GUIStyle();
+
+        HealthGUI.fontSize = 25;
+
+        HealthGUI.normal.textColor = Color.black;
+
+        GUI.Label(new Rect(12, 10, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(8, 10, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(10, 8, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(10, 12, 100, 40), "Health: " + health, HealthGUI);
+
+        HealthGUI.normal.textColor = Color.red;
+
+        GUI.Label(new Rect(10, 10, 100, 40), "Health: " + health, HealthGUI);
     }
 
 
