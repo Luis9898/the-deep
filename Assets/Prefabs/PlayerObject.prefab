@@ -27,6 +27,8 @@ GameObject:
   - component: {fileID: 50582318110691372}
   - component: {fileID: 114472322633830054}
   - component: {fileID: 114458019202506640}
+  - component: {fileID: 111747995364961298}
+  - component: {fileID: 95248123496100182}
   m_Layer: 9
   m_Name: PlayerObject
   m_TagString: Player
@@ -83,7 +85,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.45000002}
+    oldSize: {x: 2.88, y: 2.88}
     newSize: {x: 0.36, y: 0.45000002}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -105,6 +107,38 @@ PolygonCollider2D:
       - {x: 0.109051935, y: -0.008827868}
       - {x: 0.15831739, y: 0.0501374}
       - {x: 0.15756358, y: 0.16241339}
+--- !u!95 &95248123496100182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356316017022792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e44cc760de3d460789bdbdf5f218528, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111747995364961298
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356316017022792}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: aeaea304aaba64498aeea3bbc73022ac, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114152297342448136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,9 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c4ccb2542f30c449254f90d4b912b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   scoreBuffer: 0
-  level: 0
 --- !u!114 &114664054945765920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,7 +239,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6cfb007bab3de164fa744b9481ae0082, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 039046e6c19b14d4dac567670c4a1086, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

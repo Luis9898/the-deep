@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 50689777033767760}
   - component: {fileID: 114431924923823650}
   - component: {fileID: 114496492003189286}
+  - component: {fileID: 111349355889872528}
+  - component: {fileID: 95387971758293010}
   m_Layer: 15
   m_Name: TorpedoBoi
   m_TagString: Untagged
@@ -79,9 +81,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.020000001, y: 0, z: 0, w: 0.010000001}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.33, y: 0.48}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 0.33, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -90,6 +92,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.33, y: 0.48}
   m_EdgeRadius: 0
+--- !u!95 &95387971758293010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1327690220580844}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8f0695f333ae4035bfbd578cc8b0365, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111349355889872528
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1327690220580844}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 53a386ac185074f6d827af310a0a7ca5, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114431924923823650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300018, guid: 6cfb007bab3de164fa744b9481ae0082, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec4a4d26e77764bb28eb9d4474ce1a79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

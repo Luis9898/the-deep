@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 61991860957064578}
   - component: {fileID: 50186436907437278}
   - component: {fileID: 114625421252516848}
+  - component: {fileID: 111242807267309960}
+  - component: {fileID: 95320650887954296}
   m_Layer: 8
   m_Name: MonsterObjectFast
   m_TagString: Untagged
@@ -83,7 +85,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.02, y: 1.02}
-    newSize: {x: 0.36, y: 0.48}
+    newSize: {x: 1.02, y: 1.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -91,6 +93,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.48}
   m_EdgeRadius: 0
+--- !u!95 &95320650887954296
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434774977851948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 200bb32270b65417cbebfb63f8b57eab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &111242807267309960
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434774977851948}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0a4d77f1764994167b0ead7de7cec8c3, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114120499143078868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +221,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.36, y: 0.48}
+  m_Size: {x: 1.02, y: 1.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
