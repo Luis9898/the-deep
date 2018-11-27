@@ -23,11 +23,11 @@ GameObject:
   - component: {fileID: 114905559484345544}
   - component: {fileID: 114280049061904474}
   - component: {fileID: 114930535633466582}
-  - component: {fileID: 61957004910732676}
   - component: {fileID: 50564761503591650}
   - component: {fileID: 114998334743505700}
   - component: {fileID: 111065268080874302}
   - component: {fileID: 95457427722794122}
+  - component: {fileID: 60917951417199038}
   m_Layer: 8
   m_Name: MonsterObjectSlow
   m_TagString: Untagged
@@ -68,8 +68,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61957004910732676
-BoxCollider2D:
+--- !u!60 &60917951417199038
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -90,9 +90,30 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.48}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.21, y: -0.099999994}
+      - {x: 0.28, y: 0.17999999}
+      - {x: 0.28, y: 0.42999998}
+      - {x: 0.22, y: 0.74}
+      - {x: 0.049999997, y: 1.02}
+      - {x: -0.14, y: 1.02}
+      - {x: -0.22999999, y: 1}
+      - {x: -0.26, y: 0.96999997}
+      - {x: -0.25, y: 0.74}
+      - {x: -0.22, y: 0.56}
+      - {x: -0.32999998, y: 0.35}
+      - {x: -0.32999998, y: -0.22}
+      - {x: -0.29999998, y: -0.35999998}
+      - {x: -0.29, y: -0.39}
+      - {x: -0.24, y: -0.68}
+      - {x: -0.17, y: -0.88}
+      - {x: -0.13, y: -0.91999996}
+      - {x: -0.02, y: -0.91999996}
+      - {x: 0.02, y: -0.90999997}
+      - {x: 0.01, y: -0.81}
+      - {x: 0.07, y: -0.71}
+      - {x: 0.13, y: -0.51}
 --- !u!95 &95457427722794122
 Animator:
   serializedVersion: 3
