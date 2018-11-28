@@ -11,6 +11,11 @@ public class PlayerShoot: MonoBehaviour
     private int shottyTimer;
     public int fastTimer;
 
+    public AudioClip shoot;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     public GameObject bulletPrefab;
 
     // Use this for initialization
@@ -19,6 +24,7 @@ public class PlayerShoot: MonoBehaviour
         cooldown = 0f;
         powerup = 0;
         shottyTimer = 0;
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +43,8 @@ public class PlayerShoot: MonoBehaviour
             cooldown = firedelay;
 
             Vector3 offset = transform.rotation * new Vector3(0, .5f, 0);
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(shoot, vol);
             GameObject b = Instantiate(bulletPrefab, transform.position + offset, transform.rotation);
 
             //if regular shooting

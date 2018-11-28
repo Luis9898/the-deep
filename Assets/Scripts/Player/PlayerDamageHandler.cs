@@ -13,12 +13,15 @@ public class PlayerDamageHandler : MonoBehaviour {
     SpriteRenderer m_SpriteRenderer;            //The Color to be assigned to the Renderer’s Material
     Color m_NewColor;
 
+    public AudioClip deathsound;
+    public AudioClip painsound;
+    private AudioSource source;
 
     // Use this for initialization
     private void Start() {
         defaultLayer = gameObject.layer;                            //assign default layer, in case of later modification
         m_SpriteRenderer = GetComponent<SpriteRenderer>();          //get SpriteRenderer (for transparency during invincibility)
-
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,7 @@ public class PlayerDamageHandler : MonoBehaviour {
 
                 //grant brief invulnerability IF player is still alive
                 if (health > 0) {
+                    source.PlayOneShot(painsound, 1.0f);
                     juggerTimer = juggerTimerMax;
                     gameObject.layer = 10;
                 }
@@ -68,15 +72,24 @@ public class PlayerDamageHandler : MonoBehaviour {
     //execute upon object death
     private void Die()
     {
+        enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<PlayerShoot>().enabled = false;
+        source.PlayOneShot(deathsound, 1.0f);
+
         //Updates the highscore and checks it against the list. Inserts highscore into the list.
         HighScore.curHighScore = CurrentScore.Score;
         HighScore.checkHS();
-        
 
-        //go to high score scene
-        SceneManager.LoadScene(2);
+
+        StartCoroutine(LoadLevelAfterDelay(deathsound.length));
     }
 
+    IEnumerator LoadLevelAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(2);
+    }
 
     //displayed health on upper left corner
     private void OnGUI()

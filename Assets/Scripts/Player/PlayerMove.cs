@@ -39,7 +39,7 @@ public class PlayerMove : MonoBehaviour {
 
         //if right mouse button held down
         //if(Input.touchCount > 0)
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             rb.AddForce(mouse_dir * force);
             transform.rotation = Quaternion.LookRotation(Vector3.forward, mouse_pos - transform.position);

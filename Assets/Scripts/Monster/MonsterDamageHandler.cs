@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterDamageHandler : MonoBehaviour {
 
     public int health = 1;                          //health of object
+    public bool CP = false;
     public GameObject powerupPrefab;                //used to create powerup (upon monster death)
     public GameObject urchinPrefab;                 //used to create urchin
 
@@ -13,15 +14,20 @@ public class MonsterDamageHandler : MonoBehaviour {
     public GameObject keyPrefab;
     GameObject monsterInstance;
 
+    public AudioClip urchindeath;
+    public AudioClip squiddeath;
+    public AudioClip wormdeath;
+    private AudioSource source;
 
     // Use this for initialization
-    private void Start () {		
+    private void Start () {
         //nop
-	}
-	
+        source = GetComponent<AudioSource>();
+    }
 
-	// Update is called once per frame
-	private void Update () {
+
+    // Update is called once per frame
+    private void Update () {
 
         //check for health inside Update() to prevent sync issues
         if (health <= 0)
@@ -37,6 +43,9 @@ public class MonsterDamageHandler : MonoBehaviour {
         if (collision.gameObject.layer != 13 && collision.gameObject.layer != 14) {
             health--;
         }
+
+        if (collision.gameObject.layer == 9)
+            CP = true;
 
         else if(gameObject.tag == "Urchin") {
             Die();
