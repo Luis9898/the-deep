@@ -23,5 +23,8 @@ public class FacePlayer : MonoBehaviour {
         //rotate in said direction (slowly)
         float zAngle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg - 90;
         rb.MoveRotation(zAngle);
+
+        if (Vector3.Distance(transform.position, player.transform.position) > 25)
+            GetComponent<MonsterDamageHandler>().health = 0;
     }
 }

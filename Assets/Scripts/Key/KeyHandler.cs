@@ -13,7 +13,7 @@ public class KeyHandler : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if key collides with player
-        if (collision.gameObject.layer == 9) {
+        if (collision.gameObject.layer == 9 || collision.gameObject.layer == 10) {
             //update key count
             KeyCount.Keys++;
             Debug.Log(KeyCount.Keys);

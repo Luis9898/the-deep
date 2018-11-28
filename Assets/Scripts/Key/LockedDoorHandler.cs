@@ -12,7 +12,7 @@ public class LockedDoorHandler : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if key collides with player
-        if (collision.gameObject.layer == 9 && KeyCount.Keys == requiredkeys) {
+        if ((collision.gameObject.layer == 9 || collision.gameObject.layer == 10 )&& KeyCount.Keys == requiredkeys) {
 
             //kys
             Die();
@@ -21,11 +21,12 @@ public class LockedDoorHandler : MonoBehaviour {
 
     //destroy door
     private void Die() {
-
         if (unleashTheBoi == true) {
             GameObject t = (GameObject)Instantiate(torpedoPrefab, transform.position, Quaternion.identity);
-            t.transform.position = new Vector3(-1.6f, -70, 0);
+            t.transform.position = new Vector3(-1.6f, transform.position.y - 70, 0);
         }
+
+        CurrentScore.Level++;
         Destroy(gameObject);
     }
 }

@@ -42,10 +42,9 @@ public class PlayerMove : MonoBehaviour {
         if (Input.GetMouseButton(1))
         {
             rb.AddForce(mouse_dir * force);
-            //transform.rotation = Quaternion.LookRotation(Vector3.forward, mouse_pos - transform.position);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, rb.velocity.normalized);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, mouse_pos - transform.position);
+            //transform.rotation = Quaternion.LookRotation(Vector3.forward, rb.velocity.normalized);
         }
-
 
         //set max speed (in case surpassed)
         if (rb.velocity.magnitude > maxSpeed)

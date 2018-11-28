@@ -16,14 +16,16 @@ public class LevelDetector : MonoBehaviour {
     // Update is called once per frame
     private void Update() {
         if (gameObject.transform.position.y < depths[pos]) {
-            CurrentScore.Level = levels[pos];
-            pos++;
+            //CurrentScore.Level = levels[pos];
+            //pos++;
 
-            Debug.Log("Now on Level: " + CurrentScore.Level);
+            //Debug.Log("Now on Level: " + CurrentScore.Level);
         }
 
-        if (gameObject.transform.position.y < 10 && CurrentScore.Treasure == 1) {
+        if (gameObject.transform.position.y > 0 && CurrentScore.Treasure == 1) {
+            CurrentScore.Score += 50000;
             gameObject.GetComponent<PlayerDamageHandler>().health = 0;
+
         }
     }
 

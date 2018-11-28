@@ -49,6 +49,9 @@ TagManager:
   - name: foreground
     uniqueID: 1240164667
     locked: 0
+  - name: cover terrain
+    uniqueID: 4163214249
+    locked: 0
   - name: keylasdf
     uniqueID: 3869531123
     locked: 0
