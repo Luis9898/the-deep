@@ -11,17 +11,18 @@ public class MonsterDamageHandler : MonoBehaviour {
     public GameObject monsterPrefabSlow;                //monster object, to later be modified for various types
     public GameObject monsterPrefabFast;                //monster object, to later be modified for various types
     public GameObject keyPrefab;
+    public GameObject soundPrefab;
     GameObject monsterInstance;
 
-
     // Use this for initialization
-    private void Start () {		
+    private void Start () {
         //nop
-	}
-	
+        soundPrefab = GameObject.FindWithTag("Sound");
+    }
 
-	// Update is called once per frame
-	private void Update () {
+
+    // Update is called once per frame
+    private void Update () {
 
         //check for health inside Update() to prevent sync issues
         if (health <= 0)
@@ -86,6 +87,18 @@ public class MonsterDamageHandler : MonoBehaviour {
         //update player score
         GameObject.FindWithTag("Player").GetComponent<CalculateScore>().scoreBuffer++;
 
+        if (gameObject.tag == "Squid")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(4);
+        }
+        else if (gameObject.tag == "Eel")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(5);
+        }
+        else if (gameObject.tag == "Urchin")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(6);
+        }
         //delete monster
         Destroy(gameObject);
     }

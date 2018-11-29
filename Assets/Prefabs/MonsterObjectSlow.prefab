@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 60917951417199038}
   m_Layer: 8
   m_Name: MonsterObjectSlow
-  m_TagString: Untagged
+  m_TagString: Eel
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   monsterPrefabSlow: {fileID: 0}
   monsterPrefabFast: {fileID: 0}
   keyPrefab: {fileID: 0}
+  soundPrefab: {fileID: 0}
 --- !u!114 &114905559484345544
 MonoBehaviour:
   m_ObjectHideFlags: 1

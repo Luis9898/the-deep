@@ -12,6 +12,7 @@ public class PlayerShoot: MonoBehaviour
     public int fastTimer;
 
     public GameObject bulletPrefab;
+    public GameObject soundPrefab;
 
     // Use this for initialization
     void Start() {
@@ -19,6 +20,7 @@ public class PlayerShoot: MonoBehaviour
         cooldown = 0f;
         powerup = 0;
         shottyTimer = 0;
+        soundPrefab = GameObject.FindWithTag("Sound");
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerShoot: MonoBehaviour
 
         if (cooldown <= 0)
         {
+            soundPrefab.GetComponent<SoundHandler>().playSound(0);
             if (fastTimer > 0)
                 firedelay = .15f;
             else

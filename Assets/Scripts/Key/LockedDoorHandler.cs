@@ -5,15 +5,20 @@ using UnityEngine;
 public class LockedDoorHandler : MonoBehaviour {
 
     public GameObject torpedoPrefab;
+    public GameObject soundPrefab;
     public bool unleashTheBoi;
     public int requiredkeys;
+
+    void Start() {
+        soundPrefab = GameObject.FindWithTag("Sound");
+    }
 
     //detect a collision (use rigid body, no triggers)
     private void OnCollisionEnter2D(Collision2D collision) {
 
         //if key collides with player
         if ((collision.gameObject.layer == 9 || collision.gameObject.layer == 10 )&& KeyCount.Keys == requiredkeys) {
-
+            soundPrefab.GetComponent<SoundHandler>().playSound(8);
             //kys
             Die();
         }

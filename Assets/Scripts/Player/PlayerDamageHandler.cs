@@ -9,6 +9,7 @@ public class PlayerDamageHandler : MonoBehaviour {
     public float juggerTimerMax = 0f;               //max time for invulnerability (player into enemy collision)
     public float juggerTimer = 0f;                  //time remaining for invulnerability
     int defaultLayer;                               //default layer for object (in case of modification)
+    public GameObject soundPrefab;
 
     SpriteRenderer m_SpriteRenderer;            //The Color to be assigned to the Renderer’s Material
     Color m_NewColor;
@@ -18,7 +19,7 @@ public class PlayerDamageHandler : MonoBehaviour {
     private void Start() {
         defaultLayer = gameObject.layer;                            //assign default layer, in case of later modification
         m_SpriteRenderer = GetComponent<SpriteRenderer>();          //get SpriteRenderer (for transparency during invincibility)
-
+        soundPrefab = GameObject.FindWithTag("Sound");
     }
 
     // Update is called once per frame
@@ -57,6 +58,7 @@ public class PlayerDamageHandler : MonoBehaviour {
 
                 //grant brief invulnerability IF player is still alive
                 if (health > 0) {
+                    soundPrefab.GetComponent<SoundHandler>().playSound(3);
                     juggerTimer = juggerTimerMax;
                     gameObject.layer = 10;
                 }
