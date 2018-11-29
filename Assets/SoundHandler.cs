@@ -58,7 +58,7 @@ public class SoundHandler : MonoBehaviour {
         }
         else if (c == 8)
         {
-            source.PlayOneShot(door, 1.0f);
+            source.PlayOneShot(door, 0.8f);
         }
     }
 }
