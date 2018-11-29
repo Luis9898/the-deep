@@ -40,12 +40,12 @@ public class MonsterDamageHandler : MonoBehaviour {
 
         //if not colliding colliding with terrain, deduct health.
         //NOTE: monsters cannot collide with other monsters (possibly change later)
+        if (collision.gameObject.layer == 9)
+            CP = true;
+
         if (collision.gameObject.layer != 13 && collision.gameObject.layer != 14) {
             health--;
         }
-
-        if (collision.gameObject.layer == 9)
-            CP = true;
 
         else if(gameObject.tag == "Urchin") {
             Die();
@@ -96,6 +96,32 @@ public class MonsterDamageHandler : MonoBehaviour {
         GameObject.FindWithTag("Player").GetComponent<CalculateScore>().scoreBuffer++;
 
         //delete monster
-        Destroy(gameObject);
+        if (gameObject.tag == "Squid")
+        {
+            if (!CP)
+                source.PlayOneShot(squiddeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, squiddeath.length);
+        }
+
+        else if (gameObject.tag == "Worm")
+        {
+            if (!CP)
+                source.PlayOneShot(wormdeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, wormdeath.length);
+        }
+
+        else if (gameObject.tag == "Urchin")
+        {
+            source.PlayOneShot(urchindeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, urchindeath.length);
+        }
+
+        // Destroy(gameObject);
     }
 }
