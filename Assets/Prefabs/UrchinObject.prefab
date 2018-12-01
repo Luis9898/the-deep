@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 111548984391724980}
   - component: {fileID: 95535247243707248}
   - component: {fileID: 60544777169054972}
+  - component: {fileID: 82863932234155100}
   m_Layer: 8
   m_Name: UrchinObject
   m_TagString: Urchin
@@ -129,6 +130,101 @@ PolygonCollider2D:
       - {x: 0.34, y: -0.34}
       - {x: 0.39, y: -0.35}
       - {x: 0.41, y: -0.26999998}
+--- !u!82 &82863932234155100
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403016115295486}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cab5fae6dc7b5443ebc4ab4039b95116, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95535247243707248
 Animator:
   serializedVersion: 3
@@ -173,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  CP: 0
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
   urchinPrefab: {fileID: 1403016115295486}
@@ -181,6 +278,9 @@ MonoBehaviour:
   monsterPrefabFast: {fileID: 1998963686792842, guid: 8f2d6faae7c395e46aec34ef92c70ee2,
     type: 2}
   keyPrefab: {fileID: 0}
+  urchindeath: {fileID: 8300000, guid: cab5fae6dc7b5443ebc4ab4039b95116, type: 3}
+  squiddeath: {fileID: 0}
+  wormdeath: {fileID: 0}
 --- !u!114 &114593841304551956
 MonoBehaviour:
   m_ObjectHideFlags: 1

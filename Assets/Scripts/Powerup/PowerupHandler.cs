@@ -8,14 +8,24 @@ public class PowerupHandler : MonoBehaviour {
     public int powerupSelect;           //choice of powerup
     private int health;                 //health remaining on powerup (0 or 1)
     GameObject player;                  //player object (to give powerup)
+<<<<<<< HEAD
     public GameObject soundPrefab;
+=======
+
+    public AudioClip pup;
+    private AudioSource source;
+>>>>>>> master
 
     // Use this for initialization
     void Start() {
         powerupSelect = (int)(Random.Range(1f, 5.999999f));
         health = 1;
         player = GameObject.FindWithTag("Player");                  //find player object
+<<<<<<< HEAD
         soundPrefab = GameObject.FindWithTag("Sound");
+=======
+        source = GetComponent<AudioSource>();
+>>>>>>> master
     }
 
     private void Update()
@@ -34,6 +44,9 @@ public class PowerupHandler : MonoBehaviour {
     //give player the powerup, execute upon object death
     private void Die()
     {
+        enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        source.PlayOneShot(pup, 1.0f);
 
         //if 1 (shotgun) or 2 (lead bullets)
         if (powerupSelect == 1)
@@ -55,7 +68,11 @@ public class PowerupHandler : MonoBehaviour {
         else
             player.GetComponent<PlayerShoot>().fastTimer = 40;
 
+<<<<<<< HEAD
         soundPrefab.GetComponent<SoundHandler>().playSound(2);
         Destroy(gameObject);
+=======
+        Destroy(gameObject, pup.length);
+>>>>>>> master
     }
 }

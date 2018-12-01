@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterDamageHandler : MonoBehaviour {
 
     public int health = 1;                          //health of object
+    public bool CP = false;
     public GameObject powerupPrefab;                //used to create powerup (upon monster death)
     public GameObject urchinPrefab;                 //used to create urchin
 
@@ -14,10 +15,22 @@ public class MonsterDamageHandler : MonoBehaviour {
     public GameObject soundPrefab;
     GameObject monsterInstance;
 
+<<<<<<< HEAD
     // Use this for initialization
     private void Start () {
         //nop
         soundPrefab = GameObject.FindWithTag("Sound");
+=======
+    public AudioClip urchindeath;
+    public AudioClip squiddeath;
+    public AudioClip wormdeath;
+    private AudioSource source;
+
+    // Use this for initialization
+    private void Start () {
+        //nop
+        source = GetComponent<AudioSource>();
+>>>>>>> master
     }
 
 
@@ -35,6 +48,9 @@ public class MonsterDamageHandler : MonoBehaviour {
 
         //if not colliding colliding with terrain, deduct health.
         //NOTE: monsters cannot collide with other monsters (possibly change later)
+        if (collision.gameObject.layer == 9)
+            CP = true;
+
         if (collision.gameObject.layer != 13 && collision.gameObject.layer != 14) {
             health--;
         }
@@ -100,6 +116,32 @@ public class MonsterDamageHandler : MonoBehaviour {
             soundPrefab.GetComponent<SoundHandler>().playSound(6);
         }
         //delete monster
-        Destroy(gameObject);
+        if (gameObject.tag == "Squid")
+        {
+            if (!CP)
+                source.PlayOneShot(squiddeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, squiddeath.length);
+        }
+
+        else if (gameObject.tag == "Worm")
+        {
+            if (!CP)
+                source.PlayOneShot(wormdeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, wormdeath.length);
+        }
+
+        else if (gameObject.tag == "Urchin")
+        {
+            source.PlayOneShot(urchindeath, 1.0f);
+            enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, urchindeath.length);
+        }
+
+        // Destroy(gameObject);
     }
 }
