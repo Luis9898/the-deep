@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/Luis/Desktop/apks/Beta.apk
+D:/Users/reaga/Desktop/the-deep/AndroidBuilds/the_deep.apk
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Level1.unity
@@ -138,9 +138,11 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 dae48ecdf92f05e7ccdb661bbc3cc9cc Assembly-CSharp.dll:.Pause
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.AnimationSpeed
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Treasure
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.KeyHandler
+8bac2cca07c35bcf6f1853526e8deaed Assembly-CSharp.dll:.KeyHandler
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+c9682a1931bdcbeb4831c0c175a9c627 Assembly-CSharp.dll:.SoundHandler
 3cb945a7574ed3b38d63b4e06537262c Assembly-CSharp.dll:.DropMe
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ChangeColorBackground
 dfb060f716690fabe49ddfe5d3792bfd Assembly-CSharp.dll:.CameraFollow
@@ -149,8 +151,8 @@ c1120434be76081af114a1a7f5102df6 Assembly-CSharp.dll:.BouncyHandler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ShowSliderValue
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HighScore2test
-97bcf4165f280c616b4cef0fd17a2c86 Assembly-CSharp.dll:.MonsterDamageHandler
-fade13b40f77ee80100a2b7b8a181a49 Assembly-CSharp.dll:.LockedDoorHandler
+0b14b0eb8834fccb6bea25284472a3ec Assembly-CSharp.dll:.MonsterDamageHandler
+37edd44d628bf596c91c6a30873959f4 Assembly-CSharp.dll:.LockedDoorHandler
 d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.BulletMove
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HighScore4test
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -187,7 +189,7 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 bd13f99cd50512a663b7bf3a54656aa2 Assembly-CSharp.dll:.PlayerMove
-e1fb949118393067081d9dbde4c2fe94 Assembly-CSharp.dll:.PlayerShoot
+7ba2f628db1d2bfa44c6fe1b776dd491 Assembly-CSharp.dll:.PlayerShoot
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 486cd95c82d8305219c352c06b776e1f UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -203,7 +205,7 @@ cd86c60874bd545934f39adf94bdc31a Assembly-CSharp.dll:.HighScore
 c1120434be76081af114a1a7f5102df6 Assembly-CSharp.dll:.MonsterMove
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HighScore5test
-4ce57b021fbb70226debf02882af8822 Assembly-CSharp.dll:.PowerupHandler
+d2c4cab0bb80c8173b3d0688cf188c4e Assembly-CSharp.dll:.PowerupHandler
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.QuitOnClick

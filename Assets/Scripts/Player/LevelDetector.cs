@@ -11,6 +11,10 @@ public class LevelDetector : MonoBehaviour {
     // Use this for initialization
     private void Start () {
         pos = 0;
+        CurrentScore.Score = 0;
+        CurrentScore.Level = 1;
+        CurrentScore.Treasure = 0;
+        KeyCount.Keys = 0;
     }
 
     // Update is called once per frame
@@ -22,7 +26,7 @@ public class LevelDetector : MonoBehaviour {
             //Debug.Log("Now on Level: " + CurrentScore.Level);
         }
 
-        if (gameObject.transform.position.y > 0 && CurrentScore.Treasure == 1) {
+        if (gameObject.transform.position.y > -5 && CurrentScore.Treasure == 1) {
             CurrentScore.Score += 50000;
             gameObject.GetComponent<PlayerDamageHandler>().health = 0;
 
@@ -31,19 +35,27 @@ public class LevelDetector : MonoBehaviour {
 
     private void OnGUI() {
 
-        GUIStyle HealthGUI = new GUIStyle();
 
-        HealthGUI.fontSize = 20;
+        GUIStyle LevelGUI = new GUIStyle();
 
-        HealthGUI.normal.textColor = Color.black;
 
-        GUI.Label(new Rect(12, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
-        GUI.Label(new Rect(8, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
-        GUI.Label(new Rect(10, 63, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
-        GUI.Label(new Rect(10, 67, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+        LevelGUI = new GUIStyle();
+        int yCoordinate = 160;
+        int xCoordinate = 10;
 
-        HealthGUI.normal.textColor = Color.white;
+        LevelGUI.fontSize = 80;
+        LevelGUI.font = Resources.Load<Font>("TheJewishBitmap");
 
-        GUI.Label(new Rect(10, 65, 100, 30), "Level: " + CurrentScore.Level, HealthGUI);
+        LevelGUI.normal.textColor = Color.black;
+
+        GUI.Label(new Rect(xCoordinate + 2, yCoordinate, 100, 40), "Level: " + CurrentScore.Level, LevelGUI);
+        GUI.Label(new Rect(xCoordinate - 2, yCoordinate, 100, 40), "Level: " + CurrentScore.Level, LevelGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate + 2, 100, 40), "Level: " + CurrentScore.Level, LevelGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate - 2, 100, 40), "Level: " + CurrentScore.Level, LevelGUI);
+
+        LevelGUI.normal.textColor = Color.white;
+
+        GUI.Label(new Rect(xCoordinate, yCoordinate, 100, 40), "Level: " + CurrentScore.Level, LevelGUI);
+
     }
 }

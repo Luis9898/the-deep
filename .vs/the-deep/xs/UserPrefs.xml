@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{C86B5C5F-8E6F-ADAA-9DDA-3D971AD868DB}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SoundHandler.cs">
+    <Files>
+      <File FileName="Assets/SoundHandler.cs" Line="41" Column="41" />
+      <File FileName="Assets/Scripts/Key/KeyHandler.cs" Line="23" Column="19" />
+      <File FileName="Assets/Scripts/Key/LockedDoorHandler.cs" Line="23" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

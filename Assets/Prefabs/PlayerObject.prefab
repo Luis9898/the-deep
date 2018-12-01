@@ -475,6 +475,7 @@ MonoBehaviour:
   shoot: {fileID: 8300000, guid: 0cb67f95ca7074b61bc87078373bac8d, type: 3}
   bulletPrefab: {fileID: 1718504103081080, guid: 9b6edb91e55eab9428b2338bf3ef8b59,
     type: 2}
+  soundPrefab: {fileID: 0}
 --- !u!114 &114177288062112992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,8 +490,13 @@ MonoBehaviour:
   health: 5
   juggerTimerMax: 2
   juggerTimer: 0
+<<<<<<< HEAD
+  deathsound: {fileID: 0}
+  painsound: {fileID: 0}
+=======
   deathsound: {fileID: 8300000, guid: 86dd652c967f54c69bf13e891afd1718, type: 3}
   painsound: {fileID: 8300000, guid: ee6f2732b039e40ce9312f374e9b165a, type: 3}
+>>>>>>> master
 --- !u!114 &114458019202506640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -525,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62c284bb2465154d9235d9812354089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 4.5
+  maxSpeed: 4
   speedupTimerMax: 10
   speedupTimer: 0
 --- !u!212 &212159126632115704

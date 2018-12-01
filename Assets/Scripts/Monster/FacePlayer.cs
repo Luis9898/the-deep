@@ -25,6 +25,6 @@ public class FacePlayer : MonoBehaviour {
         rb.MoveRotation(zAngle);
 
         if (Vector3.Distance(transform.position, player.transform.position) > 25)
-            GetComponent<MonsterDamageHandler>().health = 0;
+            Destroy(gameObject);
     }
 }

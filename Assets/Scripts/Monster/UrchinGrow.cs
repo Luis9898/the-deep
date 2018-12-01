@@ -14,7 +14,7 @@ public class UrchinGrow : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	private void Update () {
+	private void FixedUpdate () {
         scale += growspeed * Time.deltaTime;
         transform.localScale = new Vector3(scale, scale, scale);
     }

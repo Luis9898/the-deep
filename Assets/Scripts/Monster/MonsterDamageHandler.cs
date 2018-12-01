@@ -12,8 +12,15 @@ public class MonsterDamageHandler : MonoBehaviour {
     public GameObject monsterPrefabSlow;                //monster object, to later be modified for various types
     public GameObject monsterPrefabFast;                //monster object, to later be modified for various types
     public GameObject keyPrefab;
+    public GameObject soundPrefab;
     GameObject monsterInstance;
 
+<<<<<<< HEAD
+    // Use this for initialization
+    private void Start () {
+        //nop
+        soundPrefab = GameObject.FindWithTag("Sound");
+=======
     public AudioClip urchindeath;
     public AudioClip squiddeath;
     public AudioClip wormdeath;
@@ -23,6 +30,7 @@ public class MonsterDamageHandler : MonoBehaviour {
     private void Start () {
         //nop
         source = GetComponent<AudioSource>();
+>>>>>>> master
     }
 
 
@@ -60,11 +68,11 @@ public class MonsterDamageHandler : MonoBehaviour {
         int lucky = (int)(Random.Range(1f, 19.999999f));
 
         //initalize powerup, at position of monster, looking straight up
-        if (lucky <= 2)
+        if (lucky <= 4)
             Instantiate(powerupPrefab, transform.position, Quaternion.identity);
 
         //chance to drop an urchin
-        if(lucky == 3)
+        else if(lucky <= 5)
             Instantiate(urchinPrefab, transform.position, Quaternion.identity);
 
         //if urchin, spawn more monsters (depending on scale)
@@ -95,6 +103,18 @@ public class MonsterDamageHandler : MonoBehaviour {
         //update player score
         GameObject.FindWithTag("Player").GetComponent<CalculateScore>().scoreBuffer++;
 
+        if (gameObject.tag == "Squid")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(4);
+        }
+        else if (gameObject.tag == "Eel")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(5);
+        }
+        else if (gameObject.tag == "Urchin")
+        {
+            soundPrefab.GetComponent<SoundHandler>().playSound(6);
+        }
         //delete monster
         if (gameObject.tag == "Squid")
         {

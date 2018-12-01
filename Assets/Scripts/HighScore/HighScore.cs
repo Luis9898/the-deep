@@ -94,21 +94,23 @@ public class HighScore : MonoBehaviour {
     {
         GUIStyle HSGUI = new GUIStyle();
         GUIStyle HSGUIshadow = new GUIStyle();
-        int yCoordinate = 100;
-        int xCoordinate = 500;
+        int yCoordinate = 400;
+        int xCoordinate = 1100;
         string highscoreText = "Score: " + curHighScore;
         
-        HSGUI.fontSize = 33;
-        HSGUIshadow.fontSize = 33;
+        HSGUI.fontSize = 130;
+        HSGUIshadow.fontSize = 130;
+        HSGUI.font = Resources.Load<Font>("TheJewishBitmap");
+        HSGUIshadow.font = Resources.Load<Font>("TheJewishBitmap");
 
         HSGUIshadow.normal.textColor = Color.black;
 
         HSGUI.normal.textColor = new Color(1f, 1f, 0f);
-        GUI.Label(new Rect(152, 200, 300, 50), highscoreText, HSGUIshadow);
-        GUI.Label(new Rect(148, 200, 300, 50), highscoreText, HSGUIshadow);
-        GUI.Label(new Rect(150, 202, 300, 50), highscoreText, HSGUIshadow);
-        GUI.Label(new Rect(150, 198, 300, 50), highscoreText, HSGUIshadow);
-        GUI.Label(new Rect(150, 200, 300, 50), highscoreText, HSGUI);
+        GUI.Label(new Rect(xCoordinate+102, 200, 300, 50), highscoreText, HSGUIshadow);
+        GUI.Label(new Rect(xCoordinate+98, 200, 300, 50), highscoreText, HSGUIshadow);
+        GUI.Label(new Rect(xCoordinate+100, 202, 300, 50), highscoreText, HSGUIshadow);
+        GUI.Label(new Rect(xCoordinate+100, 198, 300, 50), highscoreText, HSGUIshadow);
+        GUI.Label(new Rect(xCoordinate+100, 200, 300, 50), highscoreText, HSGUI);
 
 
         for (int i = 1; i <= 5; i++)
@@ -136,7 +138,7 @@ public class HighScore : MonoBehaviour {
             GUI.Label(new Rect(xCoordinate, yCoordinate-2, 300, 50), placement, HSGUIshadow);
             GUI.Label(new Rect(xCoordinate, yCoordinate+2, 300, 50), placement, HSGUIshadow);
             GUI.Label(new Rect(xCoordinate, yCoordinate, 300, 50), placement, HSGUI);
-            yCoordinate += 50;
+            yCoordinate += 150;
         }
     }
 

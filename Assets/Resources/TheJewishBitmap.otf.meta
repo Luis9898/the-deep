@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 30e2d95a104584618bfa475e38876ecc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: The Jewish Bitmap
+  fontNames:
+  - The Jewish Bitmap
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 445f80a48c3d840e19d81082ee9b9273, type: 3}
+  - {fileID: 12800000, guid: 2a710eb6b79444b2886f90dab33bbc10, type: 3}
+  - {fileID: 12800000, guid: 7f151658373b3430398b4d006c4571c0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
