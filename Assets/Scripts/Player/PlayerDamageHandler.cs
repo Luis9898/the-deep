@@ -9,21 +9,21 @@ public class PlayerDamageHandler : MonoBehaviour {
     public float juggerTimerMax = 0f;               //max time for invulnerability (player into enemy collision)
     public float juggerTimer = 0f;                  //time remaining for invulnerability
     int defaultLayer;                               //default layer for object (in case of modification)
-    public GameObject soundPrefab;
 
     SpriteRenderer m_SpriteRenderer;            //The Color to be assigned to the Renderer’s Material
     Color m_NewColor;
 
+    private AudioSource source;
 
     // Use this for initialization
     private void Start() {
         defaultLayer = gameObject.layer;                            //assign default layer, in case of later modification
         m_SpriteRenderer = GetComponent<SpriteRenderer>();          //get SpriteRenderer (for transparency during invincibility)
-        soundPrefab = GameObject.FindWithTag("Sound");
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    private void Update() {
+    private void FixedUpdate() {
 
         //give invulnerability if time still remaining(before updating position). 
         //If invulnerability is done, return player to normal layer.
@@ -58,7 +58,6 @@ public class PlayerDamageHandler : MonoBehaviour {
 
                 //grant brief invulnerability IF player is still alive
                 if (health > 0) {
-                    soundPrefab.GetComponent<SoundHandler>().playSound(3);
                     juggerTimer = juggerTimerMax;
                     gameObject.layer = 10;
                 }
@@ -73,27 +72,26 @@ public class PlayerDamageHandler : MonoBehaviour {
         //Updates the highscore and checks it against the list. Inserts highscore into the list.
         HighScore.curHighScore = CurrentScore.Score;
         HighScore.checkHS();
-        
-
-        //go to high score scene
         SceneManager.LoadScene(2);
     }
-
 
     //displayed health on upper left corner
     private void OnGUI()
     {
 
         GUIStyle HealthGUI = new GUIStyle();
+        int yCoordinate = 10;
+        int xCoordinate = 10;
 
-        HealthGUI.fontSize = 25;
+        HealthGUI.fontSize = 80;
+        HealthGUI.font = Resources.Load<Font>("TheJewishBitmap");
 
         HealthGUI.normal.textColor = Color.black;
 
-        GUI.Label(new Rect(12, 10, 100, 40), "Health: " + health, HealthGUI);
-        GUI.Label(new Rect(8, 10, 100, 40), "Health: " + health, HealthGUI);
-        GUI.Label(new Rect(10, 8, 100, 40), "Health: " + health, HealthGUI);
-        GUI.Label(new Rect(10, 12, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(xCoordinate+2, yCoordinate, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(xCoordinate-2, yCoordinate, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate+2, 100, 40), "Health: " + health, HealthGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate-2, 100, 40), "Health: " + health, HealthGUI);
 
         HealthGUI.normal.textColor = Color.red;
 

@@ -52,11 +52,11 @@ public class MonsterDamageHandler : MonoBehaviour {
         int lucky = (int)(Random.Range(1f, 19.999999f));
 
         //initalize powerup, at position of monster, looking straight up
-        if (lucky <= 2)
+        if (lucky <= 4)
             Instantiate(powerupPrefab, transform.position, Quaternion.identity);
 
         //chance to drop an urchin
-        if(lucky == 3)
+        else if(lucky <= 5)
             Instantiate(urchinPrefab, transform.position, Quaternion.identity);
 
         //if urchin, spawn more monsters (depending on scale)

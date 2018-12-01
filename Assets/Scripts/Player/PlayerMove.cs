@@ -53,13 +53,13 @@ public class PlayerMove : MonoBehaviour {
 
     private void Update()
     {
-        if (speedupTimer > 0)
-        {
+        if (speedupTimer > 0) {
             force = 60;
+            maxSpeed = 10;
             speedupTimer -= Time.deltaTime;
-        }
-
-        else
+        } else {
             force = 40;
+            maxSpeed = 4;
+        }
     }
 }

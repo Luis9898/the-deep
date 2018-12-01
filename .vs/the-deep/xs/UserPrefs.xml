@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SoundHandler.cs">
     <Files>
-      <File FileName="Assets/SoundHandler.cs" Line="61" Column="38" />
+      <File FileName="Assets/SoundHandler.cs" Line="41" Column="41" />
       <File FileName="Assets/Scripts/Key/KeyHandler.cs" Line="23" Column="19" />
       <File FileName="Assets/Scripts/Key/LockedDoorHandler.cs" Line="23" Column="19" />
     </Files>

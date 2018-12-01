@@ -38,7 +38,7 @@ public class SoundHandler : MonoBehaviour {
         }
         else if (c == 3)
         {
-            source.PlayOneShot(pain, 1.0f);
+            source.PlayOneShot(pain, 0.5f);
         }
         else if (c == 4)
         {
@@ -54,11 +54,11 @@ public class SoundHandler : MonoBehaviour {
         }
         else if (c == 7)
         {
-            source.PlayOneShot(key, 1.0f);
+            source.PlayOneShot(key, 0.5f);
         }
         else if (c == 8)
         {
-            source.PlayOneShot(door, 0.8f);
+            source.PlayOneShot(door, 0.5f);
         }
     }
 }

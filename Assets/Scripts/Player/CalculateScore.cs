@@ -15,7 +15,7 @@ public class CalculateScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        scoreBuffer *= CurrentScore.Level;
+        scoreBuffer *= (int)(Mathf.Pow(10, CurrentScore.Level - 1));
         CurrentScore.Score += scoreBuffer;
         scoreBuffer = 0;
 	}
@@ -23,20 +23,26 @@ public class CalculateScore : MonoBehaviour {
     //displayed score on upper left corner - added 11/26/2018
     private void OnGUI()
     {
+        GUIStyle ScoreGUI = new GUIStyle();
 
-        GUIStyle HealthGUI = new GUIStyle();
 
-        HealthGUI.fontSize = 20;
+        ScoreGUI = new GUIStyle();
+        int yCoordinate = 85;
+        int xCoordinate = 10;
 
-        HealthGUI.normal.textColor = Color.black;
+        ScoreGUI.fontSize = 80;
+        ScoreGUI.font = Resources.Load<Font>("TheJewishBitmap");
 
-        GUI.Label(new Rect(12, 40, 100, 30), "Score: " + CurrentScore.Score, HealthGUI);
-        GUI.Label(new Rect(8, 40, 100, 30), "Score: " + CurrentScore.Score, HealthGUI);
-        GUI.Label(new Rect(10, 38, 100, 30), "Score: " + CurrentScore.Score, HealthGUI);
-        GUI.Label(new Rect(10, 42, 100, 30), "Score: " + CurrentScore.Score, HealthGUI);
+        ScoreGUI.normal.textColor = Color.black;
 
-        HealthGUI.normal.textColor = Color.white;
+        GUI.Label(new Rect(xCoordinate + 2, yCoordinate, 100, 40), "Score: " + CurrentScore.Score, ScoreGUI);
+        GUI.Label(new Rect(xCoordinate - 2, yCoordinate, 100, 40), "Score: " + CurrentScore.Score, ScoreGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate + 2, 100, 40), "Score: " + CurrentScore.Score, ScoreGUI);
+        GUI.Label(new Rect(xCoordinate, yCoordinate - 2, 100, 40), "Score: " + CurrentScore.Score, ScoreGUI);
 
-        GUI.Label(new Rect(10, 40, 100, 30), "Score: " + CurrentScore.Score, HealthGUI);
+        ScoreGUI.normal.textColor = Color.white;
+
+        GUI.Label(new Rect(xCoordinate, yCoordinate, 100, 40), "Score: " + CurrentScore.Score, ScoreGUI);
+
     }
 }

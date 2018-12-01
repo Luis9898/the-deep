@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e596f87d8266b4bada2263f1d81cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 10
   powerupPrefab: {fileID: 1981588085439956, guid: 544356e420e275647b6daeb1e5155314,
     type: 2}
   urchinPrefab: {fileID: 1403016115295486, guid: 219fcbc002300ce45bde271e8ed24403,
@@ -121,6 +121,7 @@ MonoBehaviour:
   monsterPrefabSlow: {fileID: 0}
   monsterPrefabFast: {fileID: 0}
   keyPrefab: {fileID: 1022650633648060, guid: e846f2f52c945be47bd2857780e89366, type: 2}
+  soundPrefab: {fileID: 0}
 --- !u!212 &212079418467041240
 SpriteRenderer:
   m_ObjectHideFlags: 1

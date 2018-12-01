@@ -18,7 +18,6 @@ public class KeyHandler : MonoBehaviour {
             //update key count
             soundPrefab.GetComponent<SoundHandler>().playSound(7);
             KeyCount.Keys++;
-            Debug.Log(KeyCount.Keys);
             //kys
             Die();
         }

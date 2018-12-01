@@ -28,7 +28,7 @@ public class LockedDoorHandler : MonoBehaviour {
     private void Die() {
         if (unleashTheBoi == true) {
             GameObject t = (GameObject)Instantiate(torpedoPrefab, transform.position, Quaternion.identity);
-            t.transform.position = new Vector3(-1.6f, transform.position.y - 70, 0);
+            t.transform.position = new Vector3(transform.position.x, transform.position.y - 70, 0);
         }
 
         CurrentScore.Level++;
